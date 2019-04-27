@@ -1,2 +1,2 @@
-# everyday-learning
-Every Day uses script list 
+# Everyday-Learning With work for Office and Own
+Everyday Learning Script Documents
