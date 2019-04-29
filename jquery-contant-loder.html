@@ -1,0 +1,12 @@
+<body onload="load_passenger_driver_app();">
+<!--end of slider section-->
+<div id="passenter_driver_app_load" class="app_loader_style"><img src="app_loader.gif" class="app_loader_image"></div> 
+</body>
+
+<script>
+ function load_passenger_driver_app(){
+    //alert("Hello");
+    document.getElementById("passenter_driver_app_load").innerHTML = '<section class="main__middle__container"><div class="row no-margin grey-info-block text-center" style="padding:0px;"><div class="container" style="padding-bottom:60px;margin-top:30px;"><div class="separator"><img src="{{ asset('demo/images/icons/APPS.png') }}" width="10%" alt=""></div><br><div class="col-md-6"><h3><small  style="color:red">{{ $characters[1]->Passengers_App }}</small></h3><a href="https://play.google.com/store/apps/details?id=com.myridebd.rider&hl=en" target="_blank"><img src="{{ asset('demo/images/play.png') }}" style="width: 50%" alt="pic" class="img-rounded img-responsive"></a><p></p></div><div class="col-md-6"><h3><small style="color:red">{{ $characters[1]->Driver_App }}</small></h3><a href="https://play.google.com/store/apps/details?id=com.myridebd.provider&hl=en" target="_blank"><img src="{{ asset('demo/images/play.png') }}" style="width: 50%" alt="pic" class="img-rounded img-responsive"></a><p></p></div></div></div></section>';
+  }
+</script>
+
