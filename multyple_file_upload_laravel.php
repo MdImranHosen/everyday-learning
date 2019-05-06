@@ -304,11 +304,12 @@ $characters = json_decode($data);
                         $directory = public_path().'/fleet/profile/'.$fleet->id;
 
                         $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
-
+			
+                        $count_=0;
                         while($it->valid()) { ?>
                             <tr>
                            <?php
-                            if (!$it->isDot()) {
+                            if (!$it->isDot() AND $count_!=0) {
                              ?>
                              <td>{{ $fleet->id }}</td>
                               <td>
@@ -321,7 +322,7 @@ $characters = json_decode($data);
                            </tr>
                                 <?php
                             }
-
+                       $count_++;
                             $it->next();
                         }
 
