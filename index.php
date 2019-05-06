@@ -1,3 +1,9 @@
+<!--
+Name: MD Imran Hosen 
+Phone: 01983912645
+Dhaka, Bangladesh
+www.github.com/MdImranHosen
+-->
 <?php
 /* text details or many line text or Worlds but show 200 word and more option if big contents with php */
 
