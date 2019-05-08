@@ -116,3 +116,6 @@ and message send
 with javascript
 coppertechbd.com  ///  30-4-2019
 codignater framework
+
+////////////////////////////HTML DOWNLOAD ///////////////
+<a href=" uri" download >Download</a>
