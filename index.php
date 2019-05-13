@@ -119,3 +119,32 @@ codignater framework
 
 ////////////////////////////HTML DOWNLOAD ///////////////
 <a href=" uri" download >Download</a>
+
+/////////////////////////////////FIRST TIME PHONE NUMBER API USE AND LEARNING ////////
+  //step 1, get data, you can get these value from your database or any user submitted form.No need to urlencode here. Because it will send the data using POST method//
+            
+
+
+            //step 2, sendfunction//
+$to = "+8801983912645";
+$token = "xxxxxxxxxxxxxxxxxxxx";
+$message = rawurlencode("Hi Your myride promocode: ");
+
+$url = "http://domain.com/api.php";
+
+
+$data= array(
+'to'=>"$to",
+'message'=>"$message",
+'token'=>"$token"
+); // Add parameters in key value
+$ch = curl_init(); // Initialize cURL
+curl_setopt($ch, CURLOPT_URL,$url);
+curl_setopt($ch, CURLOPT_ENCODING, '');
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Close'));
+$smsresult = curl_exec($ch);
+
+            //sendsms end//
