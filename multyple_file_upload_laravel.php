@@ -1,5 +1,21 @@
 <?php 
 
+//     $new_file_upload_path='fleet/profile/'.$id.'/';
+            
+               /* if (!is_dir($new_file_upload_path)) {
+                mkdir($new_file_upload_path, 0777, true);
+                }*/
+
+               /* if (!file_exists($new_file_upload_path)) {
+                    mkdir($new_file_upload_path, 0777, true);
+                  } */
+
+                  /*else{
+                    
+                    array_map('unlink', glob($new_file_upload_path."*"));
+                
+                   }*/
+
 if(!isset($_SESSION))
     { 
      @session_start();
