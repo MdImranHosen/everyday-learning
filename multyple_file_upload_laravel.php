@@ -624,3 +624,18 @@ function getCookie(cname) {
 		  
 		  </script>
 		  <!-- End -->
+<!-- Image file exstis Checking -->
+<img class="img-circle" src="<?php
+                  if(empty($rows['USER_PROFILE_IMAGE'])){
+                     echo 'dist/img/avatar5.png';
+                  } else{
+                      $user_image = '../user_app/'.$rows['USER_PROFILE_IMAGE'];
+                      if(file_exists($user_image)){
+                          echo $user_image;
+                      } else{
+                         echo 'dist/img/avatar5.png';
+                      }
+                  }
+                   
+                  
+                  ?>" width="70" height="auto"/>		      
