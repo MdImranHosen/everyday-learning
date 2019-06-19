@@ -148,3 +148,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Close'));
 $smsresult = curl_exec($ch);
 
             //sendsms end//
+
+// Today I first Ask Post https://stackoverflow.com 
+//Navbar scrolling to fixed top fine working but when browser reloading  time mouse scrolling navbar fixed not working ?
