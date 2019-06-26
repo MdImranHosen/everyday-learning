@@ -151,3 +151,15 @@ $smsresult = curl_exec($ch);
 
 // Today I first Ask Post https://stackoverflow.com 
 //Navbar scrolling to fixed top fine working but when browser reloading  time mouse scrolling navbar fixed not working ?
+
+// 26-6-2019  php Learning
+<?php
+$str = 'This is an encoded string';
+echo base64_encode($str);
+?>
+output:  VGhpcyBpcyBhbiBlbmNvZGVkIHN0cmluZw==
+
+Use : www.site.com/index.php?action=<?php echo base64_encode($id); ?>
+Get:  action   <?php 
+  $id = base64_encode($_GET['action']);
+?>
