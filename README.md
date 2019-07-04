@@ -21,13 +21,13 @@ Everyday Learning Script Documents
   <li>Firebase</li>
   <li>Google API</li>
   <li>Google MAP</li>
-  <li>Facebook API<li>
+  <li>Facebook API</li>
   <li>ffmpeg</li>
   <li>Audio Chating system</li>
   <li>WinSCP APP USE</li>
   <li>POST Man App USE</li>
   <li>fpdf</li>
   <li>Cron Jobs - cpanel manage</li>
-  <li>PUTTY <li>
+  <li>PUTTY </li>
   <li>GIT</li>
 </ol>
