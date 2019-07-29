@@ -9,7 +9,7 @@ Everyday Learning Script Documents
   <li>HTML, HTML5, CSS, CSS3</li>
   <li>Bootstrap 3,4 AND Fontawesome 4,5 AND Google font</li>
   <li>Firebase</li>
-  <li>Google API, Google MAP, Facebook API</li>
+  <li>Google API, Google MAP, Facebook API, Traccar API</li>
   <li>ffmpeg, fpdf</li>
   <li>Audio Chating system</li>
   <li>WinSCP APP, POST Man App USE</li>
