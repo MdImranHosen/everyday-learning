@@ -1,7 +1,7 @@
 # Everyday-Learning With work for Office and Own
 Everyday Learning Script Documents
 <h1>Technical Skill</h1>
-<ol>
+<ul>
   <li>PHP, OOP, C</li>
   <li>Laravel Framework, MVC</li>
   <li>SQL, MySql, PDO</li>
@@ -16,4 +16,4 @@ Everyday Learning Script Documents
   <li>Cron Jobs - cpanel manage</li>
   <li>PUTTY</li>
   <li>GIT</li>
-</ol>
+</ul>
