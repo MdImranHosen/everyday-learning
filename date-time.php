@@ -56,3 +56,27 @@
    <div id="result"></div>
 </body>
 </html>
+  ////////////////////////////////////jsvascript explode like php /////////////////// and date ios formate ///////////
+<script> 
+
+/*var dateobj = new Date('<?php #echo date("Y-m-d H:i:s"); ?>'); 
+ // alert(dateobj);
+
+var B = dateobj.toJSON(); 
+alert(B);*/
+
+
+//Loading the variable
+/*var mystr = '0000000020C90037:TEMP:data';
+
+//Splitting it with : as the separator
+var myarr = mystr.split(":");
+
+//Then read the values from the array where 0 is the first
+//Since we skipped the first element in the array, we start at 1
+var myvar = myarr[1] + ":" + myarr[2];
+
+// Show the resulting value
+console.log(myvar);
+// 'TEMP:data'*/
+</script> 
