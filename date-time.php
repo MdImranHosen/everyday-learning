@@ -27,6 +27,12 @@
 
 ?>
 
+////::::::::::::::::::::::::::::::::::::::::::: Day add with Date :::::::::::::::::::::::://////
+<?php
+    $date = "2019-08-07";
+    echo date('Y-m-d', strtotime($date. ' + 99 days'));
+?>
+
 //////////////////////////////////////  IOS 8601 DATE TIME FORMATE /////////////////////////// JSON AND JAVASCRIPT ////////
 
 <!DOCTYPE html>
