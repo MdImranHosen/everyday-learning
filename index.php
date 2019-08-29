@@ -160,6 +160,7 @@ echo base64_encode($str);
 output:  VGhpcyBpcyBhbiBlbmNvZGVkIHN0cmluZw==
 
 Use : www.site.com/index.php?action=<?php echo base64_encode($id); ?>
+
 Get:  action   <?php 
-  $id = base64_encode($_GET['action']);
+  $id = base64_decode($_GET["action"]);
 ?>
