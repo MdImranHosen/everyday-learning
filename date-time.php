@@ -1,3 +1,21 @@
+// IOS 8601 datetime formated to normal format 
+
+<script>
+  var datei = new Date(2019-09-04T18:37:18.000+0000);
+         var datebir = datei.toJSON().slice(0,10).split("-").reverse().join("-");
+         var timebir = datei.toJSON().slice(11,19);
+	    // alert(datebir + " " + timebir);
+	    var lastUpdatetime;
+	    if(datei != ''){
+         lastUpdatetime = datebir + " " + timebir;
+	    } else{
+	     lastUpdatetime = "00-00-0000 00:00:00"; //d-m-Y H:i:s
+	    }
+	$("#output").html(lastUpdatetime); 
+</script>
+
+
+
 <?php
 /* *********************************** Date Different day count month count and years ********** */
 
