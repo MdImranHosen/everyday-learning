@@ -1,4 +1,4 @@
-<h1> How To Import Large Sql File In XAMPP ? <strong> 06-07-2019 (d-m-Y) </stron></h1>
+<h1> How To Import Large Sql File In XAMPP ? <strong> 06-07-2019 (d-m-Y) </strong></h1>
 
 #1 Open the XAMPP Control Panel
 Make sure Apache and MySQL are running and click the Shell button in the XAMPP Control Panel.
