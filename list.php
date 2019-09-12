@@ -21,3 +21,5 @@ mysql -u username -p -v database_name < "/path/file.sql"
 ///////////////////////// Bootstrap DataTable use \\\\\\\\\\\\\\\\\\\\\\\\
 
 bootstrap datatable : search paginator and data per page
+
+///////////////////// jQuery Knob // => This is a Awesome Graph .........
