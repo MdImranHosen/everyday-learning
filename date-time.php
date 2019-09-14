@@ -80,7 +80,38 @@
    <div id="result"></div>
 </body>
 </html>
-  ////////////////////////////////////jsvascript explode like php /////////////////// and date ios formate ///////////
+//////::::::::::::::::::::::::::::::::::::Today Date Time get ::::::::::::::::::::::::::::::::////////////////
+<?php 
+  $startday = date('Y-m-d 00:00:00');
+  $endday   = date('Y-m-d H:i:s');
+  echo $todayt = $startday.'='.$endday;
+  ?>
+///:::::::::::::::::::::::::::::::::: Yester Day Start and end Time Get ::::::::::::::::::::::::::::///////////
+<?php 
+  $ysday = date("Y-m-d 00:00:00", time() - 60 * 60 * 24);
+  $yeday = date("Y-m-d 23:59:00", time() - 60 * 60 * 24);
+  echo $yesterday = $ysday.'='.$yeday;
+  ?>
+///:::::::::::::::::::::::::::::::::: This Week Start and end Date Time Get ::::::::::::::::::::::::::::///////////
+<?php 
+        $signupdate = date("Y-m-d H:i:s");
+	$signupweek = date("W",strtotime($signupdate));
+	$year=date("Y",strtotime($signupdate));
+	$currentweek = date("W");
+
+	for($i=$signupweek;$i<=$currentweek;$i++) {
+	    $result_this_week=getWeek($i,$year);
+	  echo  $this_week = $result_this_week["start"]."=".$result_this_week["end"];
+
+	}
+
+	function getWeek($week, $year) {
+	  $dto = new DateTime();
+	  $result_this_week["start"] = $dto->setISODate($year, $week, 0)->format("Y-m-d H:i:s");
+	  $result_this_week["end"] = $dto->setISODate($year, $week, 6)->format("Y-m-d H:i:s");
+	  return $result_this_week;
+	} ?>
+////////////////////////////////////jsvascript explode like php /////////////////// and date ios formate ///////////
 <script> 
 
 /*var dateobj = new Date('<?php #echo date("Y-m-d H:i:s"); ?>'); 
