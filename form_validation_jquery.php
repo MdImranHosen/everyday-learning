@@ -127,3 +127,118 @@
 </script>
 </body>
 </html>
+/////////////::::::::::::::::::::::::::::::::::::::::::::  From to Data get name[] (array) to ::::::::::::::::://///////////
+<div id="output_ok"></div> <div id="summaryMileage"></div>
+  <?php 
+              $ysday = date("2019-08-14 00:00:00");
+              $yeday = date("Y-m-d 23:59:00");
+              echo $yesterday = $ysday.'='.$yeday;
+              ?>
+ <script type="text/javascript">
+  $(document).ready(function() {
+
+      var period = '<?php echo $yesterday; ?>';
+
+      var datet  = period.split("=");
+      startfrom  = datet[0];
+      endto      = datet[1];
+
+
+      var sfrom = new Date(startfrom);
+
+      var from = sfrom.toJSON();
+      //alert(from);
+      var eto = new Date(endto);
+
+      var to = eto.toJSON();
+
+		$.ajax({
+		  type: "GET",
+		  url: "http://ip/api/devices/", // Using our resources.json file to serve results
+		  headers: {
+            "Authorization": "Basic " + btoa("<?php if(!empty($_SESSION['email'])){ echo $_SESSION['email']; } ?>:<?php if(!empty($_SESSION['password'])){ echo $_SESSION['password']; } ?>")
+          },
+		  success: function(data) {
+
+	       //var total_distance_sum = 0;
+	       //var total_distancesss;
+	       var output = "<table id='datatabled' border='1'>";
+               
+			for (var j in data) {
+        
+			  var deviceId = data[j].id;
+
+			  output += "<tr><td style='padding:3px;'>"+ data[j].id +"</td><td class='all_distances' style='padding:3px;'><input type='text' name='nameGoesHere["+ data[j].id +"]' id='total_dist"+ data[j].id +"' /></td>";
+			  
+
+              var JSONObject = {"deviceId":deviceId, "from":from, "to":to};
+
+			  $.ajax({
+				  type: "GET",
+				  url: "http://ip/api/reports/trips/", 
+				  headers: {
+			        "Authorization": "Basic " + btoa("<?php if(!empty($_SESSION['email'])){ echo $_SESSION['email']; } ?>:<?php if(!empty($_SESSION['password'])){ echo $_SESSION['password']; } ?>")
+			     },
+			     data: JSONObject,
+			     dataType: 'json',
+				 success: function(results) {
+				 	//alert(JSON.stringify(results));
+
+                 var total_distance = 0;
+			    for (var i = 0; i < results.length; i++) {
+			    	var did = results[i].deviceId;
+			        total_distance += results[i].distance << 0;
+			        $('#total_dist'+did).val(total_distance);
+			       }
+
+                    
+			       //alert(total_distance);
+			        // total_distancesss = JSON.parse("[" + total_distance + "]");
+			        // alert(total_distancesss);
+				  },
+			       error: function(err){
+			          alert(JSON.stringify(err));
+			       }
+				});
+			  
+			 
+			   output += "</tr>";
+			   //total_distance_sum += dsfdsfsf << 0;
+			}
+			output += "</table>";
+
+			$('#output_ok').html(output);
+
+			   /*var total = 0;
+				$(".all_distances").each(function() {
+		         total += parseFloat($(this).text());
+		      });
+
+		     $("#total").html(total);*/
+		  }
+		});
+
+        setTimeout(function(){
+
+          //var dfdsfd = $("input[name=nameGoesHere]").val();
+          
+         //alert(dfdsfd);
+
+         var total_distance_sum = 0;
+         $('input[name^="nameGoesHere"]').each(function() {
+			     var dsfdsfsck =  $(this).val();
+			    total_distance_sum += dsfdsfsck << 0;
+		 });
+		// alert(total_distance_sum);
+		$('#summaryMileage').html(total_distance_sum+" KM");
+
+        }, 6000);
+		 
+		/* var TotalValue = 0;
+		    $("#datatabled tr").each(function(){
+		          TotalValue += parseFloat($(this).find('.all_distances').text());
+		    });
+		    alert(TotalValue);*/
+	 });
+    
+ </script>
