@@ -45,6 +45,20 @@
 
 ?>
 
+////////////////::::::::::::::::::::::::::::::::::::: Two date between diffrent Hours get :::::::::::::::::::///////////
+<script type="text/javascript">
+	$(document).ready(function(){
+		var date1 = "2019-07-16";
+		var date2 = "2019-09-16";
+		var dateOne = new Date(date1);
+		var dateTwo = new Date(date2);
+
+       var hours = Math.abs(dateTwo - dateOne) / 36e5;
+
+  	   alert(hours);
+	});
+</script>
+
 ////::::::::::::::::::::::::::::::::::::::::::: Day add with Date :::::::::::::::::::::::://////
 <?php
     $date = "2019-08-07";
