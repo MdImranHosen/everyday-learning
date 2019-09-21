@@ -25,13 +25,14 @@ database_name – database name you are importing to
 #3. If you want to see import process to screen then use the following command
 
 mysql -u username -p -v database_name < "/path/file.sql"
-
-
-///////////////////////// Bootstrap DataTable use \\\\\\\\\\\\\\\\\\\\\\\\
-
-bootstrap datatable : search paginator and data per page
-
-///////////////////// jQuery Knob // => This is a Awesome Graph .........
     </p>
+
+
+<!-- ///////////////////////// Bootstrap DataTable use \\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+    <p> bootstrap datatable : search paginator and data per page </p>
+
+<!-- ///////////////////// jQuery Knob // => This is a Awesome Graph ......... -->
+
    </body>
-   </html>
+</html>
