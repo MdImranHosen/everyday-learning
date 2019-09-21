@@ -1,3 +1,44 @@
+////////////////////:::::::::::::::::::::::::::: History recorded draw  with google map and ajax  ::::::::::::::::::::::::::::://////
+<div id="map" style="width:100%;height:400px;"></div>
+    <script type="text/javascript">
+
+      var poly;
+      var map;
+      var path;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 23.7104, lng:90.40744}
+        });
+
+        poly = new google.maps.Polyline({
+          strokeColor: 'red',
+          strokeOpacity: 1.0,
+          strokeWeight: 3
+        });
+        poly.setMap(map);
+
+      }
+       
+          $.ajax({
+            type: "GET",
+            url: "url", 
+            success: function(route_result) {
+            console.log(route_result);
+             
+            path = poly.getPath();
+
+            for (var ro in route_result) { 
+
+               path.push(new google.maps.LatLng({lat: route_result[ro].latitude, lng: route_result[ro].longitude}));
+             }
+
+            }
+          });
+    </script>
+
+//////////////////////::::::::::::::::::::::::: Smaple Map:::::::::::::::::::////////////////////////
 <!DOCTYPE html>
 <html>
   <head>
