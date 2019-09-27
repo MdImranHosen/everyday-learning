@@ -41,3 +41,5 @@ mysql -u username -p -v database_name < "/path/file.sql"
   
   ///:::::::::::::::::::: Token Create with php for html form ::::::::::::::::::::::::;;;;;;;;;;;
   <input type="hidden" id="token" value="<?php echo md5(microtime(true).mt_Rand()); ?>">
+  
+  /// :::::::::::::::::::::: Today I was create just profile focuse :::::::::::::///:::::::;;;;;;
