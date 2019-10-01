@@ -242,3 +242,19 @@
 	 });
     
  </script>
+<!--- ::::::::::::::::::::: Id and Number validation with php ::::::::::::: ---------->
+<?php 
+ public function usersDevicesGet($id){
+
+  $expr = '/^[1-9][0-9]*$/';
+if (preg_match($expr, $id) && filter_var($id, FILTER_VALIDATE_INT)) {
+  
+  $id = mysqli_real_escape_string($this->db->link, $id);
+
+  } else{
+    echo '<div class="alert alert-danger">Something went worng!</div>';
+  }
+ }
+
+
+?>
