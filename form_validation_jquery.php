@@ -258,3 +258,5 @@ if (preg_match($expr, $id) && filter_var($id, FILTER_VALIDATE_INT)) {
 
 
 ?>
+<!---------------   Input Field Onkeypress validateion only allow alphadet and numeric Digites ------------->
+<input type='text' title='Password is Required' id='password' onkeypress='return /^[0-9a-zA-Z]+$/i.test(event.key)' placeholder='Enter Password'>
