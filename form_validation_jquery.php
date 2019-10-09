@@ -260,3 +260,61 @@ if (preg_match($expr, $id) && filter_var($id, FILTER_VALIDATE_INT)) {
 ?>
 <!---------------   Input Field Onkeypress validateion only allow alphadet and numeric Digites ------------->
 <input type='text' title='Password is Required' id='password' onkeypress='return /^[0-9a-zA-Z]+$/i.test(event.key)' placeholder='Enter Password'>
+
+
+<!-------- From Validateion ------------>
+  <form id="adminLoginFrom" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+      
+      <div id="email_error_msg"></div>
+      <div id="email_err" class="form-group has-feedback">
+        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div id="pass_error_msg"></div>
+      <div id="pass_err" class="form-group has-feedback">
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      
+      <div class="row ligin_bottom_bta">
+        <!-- /.col -->
+        <div class="col-xs-8 col-xs-offset-2">
+          <button type="submit" name="login_admin" class="btn btn-danger btn-block">Sign In</button>
+        </div>
+        <!-- /.col -->
+      </div>
+      <div class="row ligin_bottom_bt">
+        <div class="col-xs-12">
+           <button type="submit" name="login_admin" class="btn btn-danger btn-block espacebottom">Sign In</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('#adminLoginFrom').on('submit', (function(){
+
+      var email = $('#email').val();
+      var pass  = $('#password').val();
+
+      if (email == "" && pass == "") {
+        $('#email_err').addClass('has-error');
+        $('#pass_err').addClass('has-error');
+        $('#email_error_msg').html("<div class='text-red'>Email Field must not be Empty!</div>");
+        $('#pass_error_msg').html("<div class='text-red'>Password Field must not be Empty!</div>");
+        //alert("Field Must not be Empty!");
+        return false;
+      } else if (email == "") {
+        $('#email_err').addClass('has-error');
+        $('#email_error_msg').html("<div class='text-red'>Email Field must not be Empty!</div>");
+        return false;
+      } else if (pass == "") {
+        $('#pass_err').addClass('has-error');
+        $('#pass_error_msg').html("<div class='text-red'>Password Field must not be Empty!</div>");
+        return false;
+      }
+
+    }));
+  });
+</script>
