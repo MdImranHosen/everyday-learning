@@ -318,3 +318,247 @@ if (preg_match($expr, $id) && filter_var($id, FILTER_VALIDATE_INT)) {
     }));
   });
 </script>
+///////////////////::::::::::::::::::::::::::::::::::::  Most Protected From validation ::::::::::::::::::::::::::////////////////
+/////:::::::::::: Start Html  code::::::::::::://///
+<form id="useradd" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+              <div class="box-body">
+                <div class="form-group" id="name_err">
+                  <label for="user_name">Name <span class="text-red"> * </span></label>
+                  <input type="text" title="Name Field is Required!" class="form-control" id="user_name" placeholder="Enter your Name.">
+                  <div id="name_err_msg"></div>
+                </div>
+
+                <div class="form-group" id="email_err">
+                  <label for="user_email">Email Address <span class="text-red"> * </span></label>
+                  <input type="email" title="Email Field is Required!" class="form-control" id="user_email" placeholder="Enter email">
+                  <div id="email_err_msg"></div>
+                </div>
+                <div class="form-group" id="mobile_err">
+                  <label for="user_mobile"> Phone <span class="text-red"> * </span></label>
+                  <input type="number" title="Phone Number is Required!" class="form-control" onkeypress="return isNumberKey(event)" id="user_mobile" placeholder="Enter Phone Number">
+                  <div id="mobile_err_msg"></div>
+                </div>
+                <div class="form-group" id="address_err">
+                  <label for="user_address"> Address <span class="text-red"> * </span></label>
+                  <input type="text" title="Address Field is Required!" class="form-control" id="user_address" placeholder="Enter Address">
+                  <div id="address_err_msg"></div>
+                </div>
+                <div class="form-group">
+                  <label for="user_note">User Note</label>
+                  <input type="text" class="form-control" id="user_note" placeholder="Enter Note">
+                </div>
+                <div class="form-group" id="pass_err">
+                  <label for="user_password"> Password <span class="text-red"> * </span></label>
+                  <input type="password" title="Password Field is Required!" class="form-control" id="user_password" placeholder="Password">
+                  <div id="pass_err_msg"></div>
+                </div>
+              </div>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-success btn-block"> Save </button>
+              </div>
+              </form>
+//////::::::: end html code and start jquery code :::::::::////
+<script type="text/javascript">
+  $(document).ready(function(){
+   // alert("ok");
+
+    $('#useradd').on('submit', function(){
+
+        var u_name      = $('#user_name').val();
+        var u_email     = $('#user_email').val();
+        var u_mobile    = $('#user_mobile').val();
+        var u_address   = $('#user_address').val();
+        var u_note      = $('#user_note').val();
+        var u_password  = $('#user_password').val();
+
+       // alert(u_name);
+      
+      if (u_name == "" && u_email == "" && u_mobile == "" && u_address == "" && u_password == "") {
+
+          $('#name_err').addClass('has-error');
+          $('#email_err').addClass('has-error');
+          $('#mobile_err').addClass('has-error');
+          $('#address_err').addClass('has-error');
+          $('#pass_err').addClass('has-error');
+          
+          $('#name_err_msg').html("<div class='text-red'> Name Field must not be Empty!</div>");
+          $('#email_err_msg').html("<div class='text-red'> Email must not be Empty!</div>");
+          $('#mobile_err_msg').html("<div class='text-red'> Mobile Number must not be Empty!</div>");
+          $('#address_err_msg').html("<div class='text-red'> Address must not be Empty!</div>");
+          $('#pass_err_msg').html("<div class='text-red'> Password must not be Empty!</div>");
+          return false;
+      } else if(u_name == ""){
+
+        $('#name_err').addClass('has-error');
+        $('#name_err_msg').html("<div class='text-red'> Name Field must not be Empty!</div>");
+         return false;
+      }  else if(u_name.length > 50){
+
+        $('#name_err').addClass('has-error');
+        $('#name_err_msg').html("<div class='text-red'> Name is too long.!</div>");
+        return false;
+      } else if(u_email == ""){
+
+        $('#email_err').addClass('has-error');
+        $('#email_err_msg').html("<div class='text-red'> Email must not be Empty!</div>");
+         return false;
+      } else if(u_email.length > 50){
+
+        $('#email_err').addClass('has-error');
+        $('#email_err_msg').html("<div class='text-red'> Email is too long. !</div>");
+         return false;
+      }  else if(!isEmail(u_email)){
+
+        $('#email_err').addClass('has-error');
+        $('#email_err_msg').html("<div class='text-red'> Invalied Email Address!</div>");
+        return false;
+      } else if(u_mobile == ""){
+
+        $('#mobile_err').addClass('has-error');
+        $('#mobile_err_msg').html("<div class='text-red'> Mobile Number must not be Empty!</div>");
+         return false;
+      } else if(u_mobile.length > 15 || u_mobile.length < 11){
+
+        $('#mobile_err').addClass('has-error');
+        $('#mobile_err_msg').html("<div class='text-red'> Mobile Number Minimum 11 digit and Maximum 15 Digit!</div>");
+         return false;
+      } else if(u_address == ""){
+
+        $('#address_err').addClass('has-error');
+        $('#address_err_msg').html("<div class='text-red'> Address must not be Empty!</div>");
+         return false;
+      }  else if(u_address.length > 200){
+
+        $('#address_err').addClass('has-error');
+        $('#address_err_msg').html("<div class='text-red'> Address is too long!</div>");
+         return false;
+      } else if(u_password == ""){
+
+        $('#pass_err').addClass('has-error');
+        $('#pass_err_msg').html("<div class='text-red'> Password must not be Empty!</div>");
+         return false;
+      } else if(u_password.length > 32 || u_password.length < 6){
+
+        $('#pass_err').addClass('has-error');
+        $('#pass_err_msg').html("<div class='text-red'> Password must be between 6 and 32 Letter!</div>");
+         return false;
+      } else{
+           
+           $.ajax({
+                type: "post",
+                url: "ajax/user_add_operation.php",
+                data: {u_name:u_name,u_email:u_email,u_mobile:u_mobile,u_address:u_address,u_note:u_note,u_password:u_password},
+                success: function(data){
+                  $('#output_msg').html(data);
+
+                  setTimeout(function(){
+                   window.location.href='users.php';
+                  }, 6000);
+                }
+           });
+           return false;
+      }
+
+    });
+
+  });
+</script>
+<script type="text/javascript">
+  function isEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}
+</script>
+//////////:::::::: end jquery code and start user_add_operation.php  page code :::::::::////
+<?php 
+ include "classes/Mainclass.php";
+ $man = new Mainclass();
+
+$USERS_NAME     = $_POST['u_name'];
+$USERS_EMAIL    = $_POST['u_email'];
+$USERS_MOBILE   = $_POST['u_mobile'];
+$USERS_ADDRESS  = $_POST['u_address'];
+$USERS_NOTE     = $_POST['u_note'];
+$USERS_PASSWORD = $_POST['u_password'];
+
+
+  $USERS_PRIVET_KEY=md5(microtime().rand());
+  
+  
+  //$key = md5(microtime().rand());
+
+  if (empty($USERS_NAME) || empty($USERS_EMAIL) || empty($USERS_MOBILE) || empty($USERS_ADDRESS) || empty($USERS_PASSWORD)) {
+	echo '<div class="alert alert-danger">Field must not be Empty!</div>';
+  } else{
+  
+   $result = $man->create_user_account($USERS_PRIVET_KEY,$USERS_NAME,$USERS_EMAIL,$USERS_ADDRESS,$USERS_MOBILE,$USERS_NOTE,$USERS_PASSWORD);
+}
+?>
+///// End ajax php and start create_user_account Method code :::::////
+<?php 
+class Mainclass{
+	protected $db;
+ 	protected $fm;
+	public function __construct(){
+
+	 $this->db = new Database();
+         $this->fm = new Format();
+	}
+	
+public function create_user_account($USERS_PRIVET_KEY,$USERS_NAME,$USERS_EMAIL,$USERS_ADDRESS,$USERS_MOBILE,$USERS_NOTE,$USERS_PASSWORD){
+
+	   $USERS_NAME    = $this->fm->validation($USERS_NAME);
+	   $USERS_EMAIL   = $this->fm->validation($USERS_EMAIL);
+	   $USERS_ADDRESS = $this->fm->validation($USERS_ADDRESS);
+	   $USERS_MOBILE  = $this->fm->validation($USERS_MOBILE);
+	   $USERS_NOTE    = $this->fm->validation($USERS_NOTE);
+
+       $USERS_PRIVET_KEY = mysqli_real_escape_string($this->db->link, $USERS_PRIVET_KEY);
+       $USERS_NAME       = mysqli_real_escape_string($this->db->link, $USERS_NAME);
+       $USERS_EMAIL      = mysqli_real_escape_string($this->db->link, $USERS_EMAIL);
+       $USERS_ADDRESS    = mysqli_real_escape_string($this->db->link, $USERS_ADDRESS);
+       $USERS_MOBILE     = mysqli_real_escape_string($this->db->link, $USERS_MOBILE);
+       $USERS_NOTE       = mysqli_real_escape_string($this->db->link, $USERS_NOTE);
+       $USERS_PASSWORD   = mysqli_real_escape_string($this->db->link, $USERS_PASSWORD);
+
+       $USERS_EMAIL = filter_var($USERS_EMAIL, FILTER_SANITIZE_EMAIL);
+
+       if (!filter_var($USERS_EMAIL, FILTER_VALIDATE_EMAIL)) {
+
+       echo '<div class="alert alert-danger" role="alert"> '.$USERS_EMAIL.' Invalid Email Address. </div>';
+       } else{
+
+       	$ckem = "SELECT * FROM USERS WHERE USERS_EMAIL = '$USERS_EMAIL'";
+       	$ckresult = $this->db->select($ckem);
+       	if ($ckresult != false) {
+       	echo '<div class="alert alert-danger" role="alert"> '.$USERS_EMAIL.' Already Exists. </div>';
+       	} else{
+	 
+       $sql = "INSERT INTO `USERS`(`USERS_PRIVET_KEY`, `USERS_NAME`, `USERS_EMAIL`, `USERS_ADDRESS`, `USERS_MOBILE`, `USERS_NOTE`,`USERS_PASSWORD`) VALUES ('$USERS_PRIVET_KEY','$USERS_NAME','$USERS_EMAIL','$USERS_ADDRESS','$USERS_MOBILE','$USERS_NOTE','$USERS_PASSWORD')";
+       $insert = $this->db->insert($sql);
+
+      if($insert > 0){
+
+      $USERS_ID = mysqli_insert_id($this->db->link);
+
+       $sqlsub = "INSERT INTO `SUB_USER`(`USERS_ID`, `SUB_USER_ID_REF`, `SUB_USER_FILLNAME`, `SUB_USER_MAIL`, `SUB_USER_MOBILE`, `SUB_USER_PASSWORD`) VALUES ($USERS_ID,$USERS_ID,'$USERS_NAME','$USERS_EMAIL','$USERS_MOBILE','$USERS_PASSWORD')";
+        $insertsub = $this->db->insert($sqlsub);
+
+        if($insertsub){
+		echo '<div class="alert alert-success">User Added Successfuly!</div>';
+		}else{
+
+		echo '<div class="alert alert-danger">Something went wrong.!</div>';
+
+		}
+    } else{
+
+		echo '<div class="alert alert-danger">Something went wrong.!</div>';
+
+	}
+   }
+  } 
+ } 
+}
+?>
+////////////////////////:::::::::::::::::::: end php and jquery and ajax code From validation :::::::::::://///////
