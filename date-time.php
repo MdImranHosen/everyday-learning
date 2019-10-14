@@ -64,6 +64,12 @@
     $date = "2019-08-07";
     echo date('Y-m-d', strtotime($date. ' + 99 days'));
 ?>
+//////::::::::::::::::::::::::::::::::::::::::::: Month add to fixed date :::::::::::::::::://////
+<?php 
+//echo date("Y-m-d", strtotime("+1 month")); 
+$dsfd = "2019-09-01";
+echo date("Y-m-d", strtotime($dsfd, "+1 month"));
+?>
 
 //////////////////////////////////////  IOS 8601 DATE TIME FORMATE /////////////////////////// JSON AND JAVASCRIPT ////////
 
