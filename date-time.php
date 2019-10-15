@@ -43,6 +43,19 @@
 
   }
 
+////////::::::::::::::::::: Date Start date to current date :::::::::::://///////
+	 $st   = date("2019-10-01");
+	 $cdte = date('Y-m-d');
+
+	 $expire = strtotime($st);
+	 $today  = strtotime($cdte);
+
+	 if($today >= $expire){
+	    echo "expired";
+	 } else {
+	    echo "Validate";
+	 }
+
 ?>
 
 ////////////////::::::::::::::::::::::::::::::::::::: Two date between diffrent Hours get :::::::::::::::::::///////////
