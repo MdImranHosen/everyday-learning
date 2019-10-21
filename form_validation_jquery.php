@@ -562,3 +562,31 @@ public function create_user_account($USERS_PRIVET_KEY,$USERS_NAME,$USERS_EMAIL,$
 }
 ?>
 ////////////////////////:::::::::::::::::::: end php and jquery and ajax code From validation :::::::::::://///////
+
+/////////////////:::::::::::::::::::::::::: Start Image height width validation php ::::::::::::::::::::::////////////
+<?php
+ function image_size_validation($image){
+	    
+	  $validation_check=false;
+	  $image_info = getimagesize($image);
+      $height_t= $image_info [0];
+	  $width_t= $image_info [1];
+  
+     if(($height_t>45 && $height_t<55 ) && ($width_t>45 && $width_t<55) ){
+        $validation_check=true;
+     }
+  
+     return $validation_check;	    
+	}
+       $profile_image = $_FILES['image'];
+
+        $sourcePath = $profile_image['tmp_name'];
+        $name_img   = $profile_image['name'];
+
+if($this->image_size_validation($sourcePath)){
+			    
+ echo "<span style='color:red;font-weight:bold;'>Image Size Should 150*150PX !</span>";
+ echo "<script>setTimeout(function(){ window.location.href='sign_up.php'; }, 3000);</script>";  
+}
+
+?>
