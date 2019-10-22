@@ -588,5 +588,16 @@ if($this->image_size_validation($sourcePath)){
  echo "<span style='color:red;font-weight:bold;'>Image Size Should 150*150PX !</span>";
  echo "<script>setTimeout(function(){ window.location.href='sign_up.php'; }, 3000);</script>";  
 }
+//=======================
+
+$data = getimagesize($sourcePath);
+$width  = $data[0];
+$height = $data[1];
+
+if(($width<145 || $width>155)|| ($height<145 ||$height>155 )){
+			    
+     $msg = "<div class='alert alert-danger'>Image Size Should 150*150PX !</div>";
+return $msg;
+} 
 
 ?>
