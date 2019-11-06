@@ -164,3 +164,25 @@ Use : www.site.com/index.php?action=<?php echo base64_encode($id); ?>
 Get:  action   <?php 
   $id = base64_decode($_GET["action"]);
 ?>
+<?php
+//////////////////////////// Database to data table to skip one row data find keyword with laravel ///////////
+  /* SELECT * FROM Customers
+               WHERE NOT Country='Germany'; */
+
+           $serviceDataal = ServiceType::orderBy('sort_order')->get();  
+               //$serviceData = ServiceType::whereNotIn('name', 'Bike')->get();
+
+			   
+			   			   $index=0;
+			    foreach($serviceDataal as $key => $value) {
+               // echo $value->id . ", " . $value->name . "<br>";
+            	if($value->name=='Bike'){
+            	
+            		unset($serviceDataal[$index]);
+
+            	}
+            $index+=1;
+              }
+			   
+                return $serviceDataal;
+?>
