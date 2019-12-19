@@ -1,3 +1,6 @@
+<?php
+ echo htmlspecialchars_decode(stripslashes($ksy->value));
+?>
 <?php 
 
 if(!isset($_SESSION))
