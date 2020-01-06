@@ -6,3 +6,6 @@ CREATE TABLE tableOne
   PRIMARY KEY (tbl_oid, tbl_tid),
   FOREIGN KEY(tbl_tid) REFERENCES tableTwo(tbl_tid)
 );
+
+
+SHOW CREATE TABLE vendors_category;
