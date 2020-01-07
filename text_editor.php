@@ -18,7 +18,7 @@
     var de;
    de = textboxio.replace('#details');
     
-    var details = de..content.get();
+    var details = de.content.get();
     alert(details);
  </script>
    <!-- End Textbox Editor -->
