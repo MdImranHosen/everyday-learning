@@ -3,6 +3,7 @@
  <title>Textbox Editor</title>
 </head>
 <body>
+ <textarea name="details" id="details"></textarea>
    <!-- 1. Textbox Editor Start -->
    <h1>Textbox Editor</h1>
    <div>
@@ -13,7 +14,13 @@
        # <strong>Folders : </strong><b> resources </b>
       </p>
    </div>
-   <script>textboxio.replace('textarea');</script>
+   <script>
+    var de;
+   de = textboxio.replace('#details');
+    
+    var details = de..content.get();
+    alert(details);
+ </script>
    <!-- End Textbox Editor -->
 </body>
 </html>
