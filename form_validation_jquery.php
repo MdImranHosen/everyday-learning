@@ -601,3 +601,11 @@ return $msg;
 } 
 
 ?>
+
+<?php 
+// Check Integer Number.....
+ $exam_id = preg_replace('/[^-a-zA-Z0-9_]/','', $_GET['examId']);
+		$exam_id = preg_replace('/\D/', '', $_GET['examId']);
+        $exam_id = htmlentities($exam_id);
+        $exam_id = (int)$exam_id;
+?>
