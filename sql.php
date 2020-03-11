@@ -1,15 +1,33 @@
 <?php
 ///::::::::::::::::: Mysql two table as tableOne in tableTwo s tbl_tid foreign key and primary key ::::::::::::///////////
-CREATE TABLE tableOne
+$sql = "CREATE TABLE tableOne
 (
   tbl_oid  int NOT NULL AUTO_INCREMENT,
   tbl_tid int NOT NULL,
   PRIMARY KEY (tbl_oid, tbl_tid),
   FOREIGN KEY(tbl_tid) REFERENCES tableTwo(tbl_tid)
-);
+)";
 
 
-SHOW CREATE TABLE vendors_category;
+"SHOW CREATE TABLE vendors_category";
+
+
+
+"Aggregate Functions
+
+These functions operate on the multiset of values of a column of
+a relation, and return a value
+avg:
+average value
+min:
+minimum value
+max:
+maximum value
+sum:
+sum of values
+count:
+number of values
+";
 
 ////::::::::::::: Database table data type Enum get data :::::php mysqli and ajax ::::::::::: way ////::::::::::::||\\\\\\\
 ?>
