@@ -609,3 +609,173 @@ return $msg;
         $exam_id = htmlentities($exam_id);
         $exam_id = (int)$exam_id;
 ?>
+
+<button type="button" class="btn btn-warning onclick_del_event" data-eventid="<?php echo $rows['id']; ?>"><i class="fa fa-trash"></i></button>
+
+<script>
+  $(document).ready(function(){
+     $(document).on('click', '.onclick_del_event', (function() {
+         var event_id = $(this).data('eventid');
+
+          $.ajax({
+                type: "post",
+                url: "ajax/event_del_ajax.php",
+                data: {event_id:event_id},
+                success: function(del){
+                  $('#message_data').html(del);
+                },
+                error: function(err){
+                  alert(err);
+                }
+          });
+
+     }));
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    $('#event_form').on('submit', function(e) {
+
+      var event_name     = $('#event_name').val();
+      var event_moto     = $('#event_moto').val();
+      var event_date     = $('#event_date').val();
+      var reg_start_date = $('#reg_start_date').val();
+      var reg_end_date   = $('#reg_end_date').val();
+      var event_type     = $('#event_type').val();
+      var payment_type   = $('#payment_type').val();
+      var payable_amount = $('#payable_amount').val();
+      var program_segmentation = $('#program_segmentation').val();
+      var event_facebook = $('#event_facebook').val();
+      var event_twitter  = $('#event_twitter').val();
+      var event_linkedin = $('#event_linkedin').val();
+      var event_instagram= $('#event_instagram').val();
+      var event_youtube  = $('#event_youtube').val();
+      //var program_segmentation = ps.content.get();
+      //var get_ps = textboxio.get( '.program_segmentation');
+      //var program_segmentation = get_ps[0];
+      var event_logo     = $('#event_logo').prop('files')[0];
+
+      if (payment_type == "Payment") {
+        if (payable_amount == "") {
+          $('#err_payable_amount').addClass('has-error');
+          $('#err_payable_amount_msg').html("<div class='text-red'> Payable Amount must not be Empty!</div>");
+        }
+      }
+      
+      if (event_name == "" && event_moto == "" && event_date == "" && reg_start_date == "" && reg_end_date == "" && event_type == "" && payment_type == "" && program_segmentation == "" && (document.getElementById("event_logo").files.length ==0)) {
+
+        $('#err_event_name').addClass('has-error');
+        $('#err_event_moto').addClass('has-error');
+        $('#err_event_logo').addClass('has-error');
+        $('#err_event_date').addClass('has-error');
+        $('#err_reg_start_date').addClass('has-error');
+        $('#err_reg_end_date').addClass('has-error');
+        $('#err_event_type').addClass('has-error');
+        $('#err_payment_type').addClass('has-error');
+        $('#err_program_segmentation').addClass('has-error');
+                  
+        $('#err_event_name_msg').html("<div class='text-red'> Event Name Field must not be Empty!</div>");
+        $('#err_event_moto_msg').html("<div class='text-red'> Event Moto Field must not be Empty!</div>");
+        $('#err_event_logo_msg').html("<div class='text-red'> Event Logo must not be Empty! </div>");
+        $('#err_event_date_msg').html("<div class='text-red'> Event Date Field must not be Empty!</div>");
+        $('#err_reg_start_date_msg').html("<div class='text-red'> Registration Start Date must not be Empty! </div>");
+        $('#err_reg_end_date_msg').html("<div class='text-red'> Registration End Date must not be Empty! </div>");
+        $('#err_event_type_msg').html("<div class='text-red'> Event Type must not be Empty!</div>");
+        $('#err_payment_type_msg').html("<div class='text-red'> Payment Type must not be Empty!</div>");        
+        $('#err_msg_program_segmentation').html("<div class='text-red'> Program Segmentation must not be Empty!</div>");
+
+          return false;
+        } else if(event_name == "") {
+
+        $('#err_event_name').addClass('has-error');
+        $('#err_event_name_msg').html("<div class='text-red'> Event Name Field must not be Empty!</div>");
+          return false;
+
+        } else if(event_moto == "") {
+
+        $('#err_event_moto').addClass('has-error');
+        $('#err_event_moto_msg').html("<div class='text-red'> Event Moto Field must not be Empty!</div>");
+        
+        return false;
+        } else if(document.getElementById("event_logo").files.length ==0) {
+
+         $('#err_event_logo').addClass('has-error');
+         $('#err_event_logo_msg').html("<div class='text-red'> Event Logo must not be Empty! </div>");
+         
+         return false;
+       } else if(program_segmentation == "") {
+
+        $('#err_program_segmentation').addClass('has-error');
+        $('#err_msg_program_segmentation').html("<div class='text-red'> Program Segmentation must not be Empty!</div>");
+        
+        return false;
+        } else if(event_date == "") {
+
+         $('#err_event_date').addClass('has-error');
+         $('#err_event_date_msg').html("<div class='text-red'> Event Date Field must not be Empty!</div>");
+
+         return false;
+       }  else if(reg_start_date == "") {
+
+         $('#err_reg_start_date').addClass('has-error');
+         $('#err_reg_start_date_msg').html("<div class='text-red'> Registration Start Date must not be Empty! </div>");
+         return false;
+       }  else if(reg_end_date == "") {
+        
+         $('#err_reg_end_date').addClass('has-error');
+         $('#err_reg_end_date_msg').html("<div class='text-red'> Registration End Date must not be Empty! </div>");
+         
+         return false;
+       }   else if(event_type == "") {
+        
+         $('#err_event_type').addClass('has-error');
+         $('#err_event_type_msg').html("<div class='text-red'> Event Type must not be Empty!</div>");
+         
+         return false;
+       }  else if(payment_type == "") {
+        
+         $('#err_payment_type').addClass('has-error');
+         $('#err_payment_type_msg').html("<div class='text-red'> Payment Type must not be Empty!</div>");
+         
+         return false;
+       } else {
+
+            var form_data = new FormData();
+
+            form_data.append('event_name', event_name);
+            form_data.append('event_moto', event_moto);
+            form_data.append('event_date', event_date);
+            form_data.append('reg_start_date', reg_start_date);
+            form_data.append('reg_end_date', reg_end_date);
+            form_data.append('payable_amount', payable_amount);
+            form_data.append('event_logo', event_logo);
+            form_data.append('event_type', event_type);
+            form_data.append('payment_type', payment_type);
+            form_data.append('program_segmentation', program_segmentation);
+            form_data.append('event_facebook', event_facebook);
+            form_data.append('event_twitter', event_twitter);
+            form_data.append('event_linkedin', event_linkedin);
+            form_data.append('event_instagram', event_instagram);
+            form_data.append('event_youtube', event_youtube);
+
+            //alert(program_segmentation);
+
+             e.preventDefault();
+            $.ajax({
+               type: "post",
+               url: "ajax/event_add_ajax.php",
+               data: form_data,
+               processData: false,
+               cache: false,
+               contentType: false,
+               success: function(event_data){
+                $('#event_message').html(event_data);
+               }
+            });
+            return false;
+       }
+
+    });
+  });
+</script>
