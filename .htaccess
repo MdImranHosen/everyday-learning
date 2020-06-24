@@ -1,0 +1,14 @@
+#RewriteEngine on
+RewriteEngine on
+#file.php to file/ support
+RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+#session start
+php_flag output_buffering on
+#/pagename.php to /pagename_add    convert
+RewriteRule ^index/?$ index.php [NC,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)index\.php($|\ |\?)
+RewriteRule ^ /%1 [R=301,L]
+RewriteRule ^news-events/([0-9]+)/?$ news-events-details.php?nedid=$1
