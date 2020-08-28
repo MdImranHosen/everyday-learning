@@ -33,3 +33,17 @@ print(imran)
 
 del imran
 print(imran)
+
+# Programming "Python" Keboard Keyword Key Type with PyAutoGUI packeges 
+import pyautogui
+import time
+message = 3
+while message > 0:
+    time.sleep(4)
+    pyautogui.typewrite("I need you")
+    time.sleep(2)
+    pyautogui.press('enter')
+
+    message = message - 1
+ # End
+
