@@ -1,0 +1,10 @@
+// First Query
+SELECT hr_1st_year_19_info.* FROM `hr_1st_year_19_info` JOIN hr_1st_year_2017_18 ON hr_1st_year_19_info.reg = hr_1st_year_2017_18.reg WHERE hr_1st_year_19_info.reg = hr_1st_year_2017_18.reg
+
+//Then Expote and import new table "hr_1st_year_19_info_improve"
+
+//Second Query 
+
+SELECT * FROM `hr_1st_year_19_marks` JOIN hr_1st_year_19_info_improve ON hr_1st_year_19_info_improve.reg = hr_1st_year_19_marks.reg WHERE hr_1st_year_19_info_improve.reg = hr_1st_year_19_marks.reg
+
+//Then Expote and import new table "hr_1st_year_2017_18_marks_update"
