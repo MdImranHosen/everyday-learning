@@ -8,3 +8,24 @@ SELECT hr_1st_year_19_info.* FROM `hr_1st_year_19_info` JOIN hr_1st_year_2017_18
 SELECT * FROM `hr_1st_year_19_marks` JOIN hr_1st_year_19_info_improve ON hr_1st_year_19_info_improve.reg = hr_1st_year_19_marks.reg WHERE hr_1st_year_19_info_improve.reg = hr_1st_year_19_marks.reg
 
 //Then Expote and import new table "hr_1st_year_2017_18_marks_update"
+
+
+CREATE TABLE `hr_1st_year_19_course` (
+  `ID` bigint(20) NOT NULL,
+  `paperid` varchar(11) NOT NULL,
+  `papertitle` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+)
+
+CREATE TABLE `hr_1st_year_19_info` (
+  `ID` bigint(20) NOT NULL,
+  `cid` int(11) NOT NULL,
+  `sid` int(11) NOT NULL,
+  `reg` varchar(50) NOT NULL,
+  `sessionid` varchar(50) NOT NULL,
+  `roll` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `studenttype` varchar(50) NOT NULL,
+  `cgpa` varchar(250) NOT NULL,
+  `pstatus` varchar(250) NOT NULL,
+  `published_date` varchar(250) NOT NULL
+)
