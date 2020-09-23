@@ -47,3 +47,13 @@ while message > 0:
     message = message - 1
  # End
 
+# Python with Image Menage with python packeges pillow
+from PIL import Image
+me = Image.open('me.png')
+bg = Image.open('ifel.jpg')
+bg.paste(me, (0,0), me)
+#bg.save('imran.jpg')
+bg.show()
+#End
+
+
