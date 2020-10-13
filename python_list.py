@@ -56,4 +56,10 @@ bg.paste(me, (0,0), me)
 bg.show()
 #End
 
+#Python Tuple Hackrrank
+n= int(input())
+x=[int(i) for i in input().split(" ")]
+t=tuple(x)
+print(hash(t))
+#end tuple
 
