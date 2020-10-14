@@ -63,3 +63,19 @@ t=tuple(x)
 print(hash(t))
 #end tuple
 
+#Python Turtle use to Love Sign
+#first install : pip install pythonturtle
+from turtle import *
+color("red")
+begin_fill()
+left(50)
+forward(100)
+circle(40, 180)
+left(260)
+circle(40, 180)
+forward(100)
+end_fill()
+done()
+#End Python Turtle use to Love Sign
+
+
