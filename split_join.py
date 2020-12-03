@@ -26,3 +26,20 @@ if __name__ == '__main__':
     i, m = input().split()
     result =  imranHosen(imran, int(i), m)
     print(result)
+    
+    #//// Find a String /////////////////////////
+    
+    def imran_string_count(s, sb):
+    sl = len(s)
+    sbl = len(sb)
+    c = 0
+    for i in range(sl-sbl+1):
+        if(s[i:(i+sbl)] == sub_string):
+            c = c+1
+    return c
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+
+    count = imran_string_count(string, sub_string)
+    print(count)
