@@ -79,6 +79,9 @@ public function eventTypeGet() {
    echo $selectd;
   }
 
+/////////:::::::::::::::::::::::::: duplicate check roll ::::::::::::::::::\\\\\\\\\\\\
+SELECT `REGISTERED_STUDENTS_EXAM_ROLL`, COUNT(`REGISTERED_STUDENTS_EXAM_ROLL`) FROM registered_students GROUP BY `REGISTERED_STUDENTS_EXAM_ROLL` HAVING COUNT(`REGISTERED_STUDENTS_EXAM_ROLL`) > 1
+
 
 ////////////::::::::::::::::::::end enum  type get type :::::::::::::\\\\\\\\\\\\\\\
 
