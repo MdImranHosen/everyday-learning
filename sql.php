@@ -100,4 +100,48 @@ UPDATE `hr_fourth_year_final_2017_paper_marks`  JOIN hr_fourth_year_final_2018_p
 UPDATE `hr_fourth_year_final_2017_paper_marks`  JOIN hr_fourth_year_final_2018_paper_marks_improve ON hr_fourth_year_final_2018_paper_marks_improve.reg=hr_fourth_year_final_2017_paper_marks.reg SET `hr_fourth_year_final_2017_paper_marks`.`tmark`=(case when (`hr_fourth_year_final_2017_paper_marks`.`tmark`> hr_fourth_year_final_2018_paper_marks_improve.tmark) then `hr_fourth_year_final_2017_paper_marks`.`tmark` else hr_fourth_year_final_2018_paper_marks_improve.tmark end),`hr_fourth_year_final_2017_paper_marks`.`lg`=(case when (`hr_fourth_year_final_2017_paper_marks`.`tmark`> hr_fourth_year_final_2018_paper_marks_improve.tmark) then `hr_fourth_year_final_2017_paper_marks`.`lg` else hr_fourth_year_final_2018_paper_marks_improve.lg end),`hr_fourth_year_final_2017_paper_marks`.`gpa`=(case when (`hr_fourth_year_final_2017_paper_marks`.`tmark`> hr_fourth_year_final_2018_paper_marks_improve.tmark) then `hr_fourth_year_final_2017_paper_marks`.`gpa` else hr_fourth_year_final_2018_paper_marks_improve.gpa end),`hr_fourth_year_final_2017_paper_marks`.`creadit`=(case when (`hr_fourth_year_final_2017_paper_marks`.`tmark`> hr_fourth_year_final_2018_paper_marks_improve.tmark) then `hr_fourth_year_final_2017_paper_marks`.`creadit` else hr_fourth_year_final_2018_paper_marks_improve.creadit end) WHERE hr_fourth_year_final_2017_paper_marks.papercode=hr_fourth_year_final_2018_paper_marks_improve.papercode
 //Update count subquery
 UPDATE `registered_students` SET `registered_students`.`sub_count`= (SELECT COUNT(selected_courses.SELECTED_COURSES_ID) FROM selected_courses WHERE selected_courses.REGISTERED_STUDENTS_ID = registered_students.REGISTERED_STUDENTS_ID GROUP BY selected_courses.REGISTERED_STUDENTS_ID) WHERE registered_students.REGISTERED_EXAM_ID = 3
+
+///////////////////////////|||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+"CREATE TABLE students(
+    ADMITTED_STUDENT_ID INT NOT NULL AUTO_INCREMENT,
+    SESSION_ID INT NOT NULL,
+    REGISTERED_COLLEGE_ID INT NOT NULL,
+    college_program_id INT NOT NULL,
+    PROGRAMS_ID INT NOT NULL,
+    ADMITTED_STUDENT_REG_NO BIGINT,
+    ADMITTED_STUDENT_NAME VARCHAR(255) NULL,
+    STUDENT_BANGLA_NAME VARCHAR(255) NULL,
+    ADMITTED_STUDENT_FATHERS_N VARCHAR(255) NULL,
+    ADMITTED_STUDENT_MOTHERS_N VARCHAR(255) NULL,
+    ADMITTED_STUDENT_ADDRESS TEXT NULL,
+    post_office VARCHAR(255) NULL,
+    police_station VARCHAR(255) NULL,
+    upa_zilla VARCHAR(255) NULL,
+    district VARCHAR(255) NULL,
+    present_house_road VARCHAR(255) NULL,
+    present_post_office VARCHAR(255) NULL,
+    present_police_station VARCHAR(255) NULL,
+    present_upa_zilla VARCHAR(255) NULL,
+    present_district VARCHAR(255) NULL,
+    ADMITTED_STUDENT_CONTACT_NO VARCHAR(255) NULL,
+    ADMITTED_STUDENT_DOB DATE NULL,
+    NATIONALITY VARCHAR(255) NULL,
+    RELIGION VARCHAR(255) NULL,
+    CASTE_SECT VARCHAR(255) NULL,
+    parents_income VARCHAR(255) NULL,
+    ADMITTED_STUDENT_GENDER VARCHAR(255) NULL,
+    ADMITTED_STUDENT_EMAIL VARCHAR(255) NULL,
+    image_dir VARCHAR(255) NULL,
+    s_signicher VARCHAR(255) NULL,
+    PASSWORD VARCHAR(255) NULL,
+    count_sent_sms TEXT NULL,
+    ACCOUNT_CREATE_STATUS INT DEFAULT 1,
+    ADMITTED_STUDENT_STATUS INT DEFAULT 1,
+    PRIMARY KEY (ADMITTED_STUDENT_ID),
+    FOREIGN KEY(SESSION_ID) REFERENCES session(SESSION_ID),
+    FOREIGN KEY(REGISTERED_COLLEGE_ID) REFERENCES registered_college(REGISTERED_COLLEGE_ID),
+    FOREIGN KEY(college_program_id) REFERENCES college_program(college_program_id),
+    FOREIGN KEY(PROGRAMS_ID) REFERENCES programs(PROGRAMS_ID)
+)";
+
 ?>
