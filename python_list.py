@@ -112,3 +112,11 @@ for i in range(thickness + 1):
 # Bottom Cone
 for i in range(thickness):
     print(((c * (thickness - i - 1)).rjust(thickness) + c + (c * (thickness - i - 1)).ljust(thickness)).rjust( thickness * 6))
+    
+    # //////////////////------------\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ from itertools import permutations
+s,n = input().split(' ')
+#  print (list(permutations(sorted(s),int(n))))
+
+for i in list(permutations(sorted(s),int(n))):
+    print(''.join(i))
