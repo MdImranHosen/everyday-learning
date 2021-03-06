@@ -129,3 +129,8 @@ for i in range(1, int(N) + 1):
     combine = list(combinations(sorted(A),i))
     for H in combine:
         print(''.join(H))
+   # /////////////// ********** Itertools with groupby() *********************\\\\\\\\\\\\\\\\
+from itertools import *
+n=input()
+for i,j in groupby(n):
+   print(tuple([len(list(j)),int(i)]), end=" ")
