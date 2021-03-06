@@ -120,3 +120,12 @@ s,n = input().split(' ')
 
 for i in list(permutations(sorted(s),int(n))):
     print(''.join(i))
+   # ////////////////// ******** Itertools Combinations *********\\\\\\\\\\\\\\\\\\\\\
+from itertools import combinations
+
+A,N = input().split(' ')
+
+for i in range(1, int(N) + 1):
+    combine = list(combinations(sorted(A),i))
+    for H in combine:
+        print(''.join(H))
