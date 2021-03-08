@@ -134,3 +134,12 @@ from itertools import *
 n=input()
 for i,j in groupby(n):
    print(tuple([len(list(j)),int(i)]), end=" ")
+    
+  #/////////////////////// ***********  ***********\\\\\\\\\\\\
+  
+  import cmath
+c=complex(input().strip())
+res = cmath.polar(c)
+
+print(res[0])
+print(res[1])
