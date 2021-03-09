@@ -143,3 +143,15 @@ res = cmath.polar(c)
 
 print(res[0])
 print(res[1])
+
+#////////////////////
+
+def average(array):
+ array=set(array)
+ return  sum(array)/len(array)
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    result = average(arr)
+    print(result)
