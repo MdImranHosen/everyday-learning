@@ -155,3 +155,17 @@ if __name__ == '__main__':
     arr = list(map(int, input().split()))
     result = average(arr)
     print(result)
+#////////////////////**************** Defaultdict Collections *********\\\\\\\\\\\\\\\\\\\\\\\\
+from collections import defaultdict
+
+N,M = map(int, input().split())
+d=defaultdict(list)
+for i in range(N):
+    s= input().rstrip()
+    d[s].append(i+1)
+for _ in range(M):
+    s=input().rstrip()
+    if s in d:
+        print(' '.join(map(str, d[s])))
+    else:
+        print('-1')
