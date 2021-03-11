@@ -169,3 +169,13 @@ for _ in range(M):
         print(' '.join(map(str, d[s])))
     else:
         print('-1')
+        
+ #//////////////////**************** Python Calendar ***************\\\\\\\\\\\\\\\\\
+import calendar
+
+#print(calendar.TextCalendar(firstweekday=6).formatyear(2021))
+weekdays = ['MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY']
+m,d,y= map(int, input().split(" "))
+
+w = calendar.weekday(y,m,d)
+print(weekdays[w])
