@@ -192,4 +192,12 @@ for i in range(int(input())):
     t1 = input()
     t2 = input()
     print(time_delta(t1, t2))
+#//////////////////// ************* ****************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+for i in range(int(input())):
+    try:
+        a, b = map(int, input().split(" "))
+        print(a//b)
+    except Exception as e:
+        print("Error Code:",e)
+
 
