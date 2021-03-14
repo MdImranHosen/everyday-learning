@@ -199,5 +199,13 @@ for i in range(int(input())):
         print(a//b)
     except Exception as e:
         print("Error Code:",e)
+# /////////////////// ************* Collections namedtuple **************** \\\\\\\\\\\\\\\\\\\
+from collections import namedtuple
+n = int(input())
+data = namedtuple("data", input().split())
+s=0
+for i in range(n):
+ s += int(data(*input().split()).MARKS)
+print(s/n)
 
 
