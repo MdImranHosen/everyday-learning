@@ -208,4 +208,9 @@ for i in range(n):
  s += int(data(*input().split()).MARKS)
 print(s/n)
 
+#////////////////////// *************** Math Degrees ************ \\\\\\\\\\\\\\\\\\\\\
 
+import math
+AB = float(input())
+BC = float(input())
+print(str(int(round(math.degrees(math.atan2(AB,BC)))))+"°")
