@@ -214,3 +214,10 @@ import math
 AB = float(input())
 BC = float(input())
 print(str(int(round(math.degrees(math.atan2(AB,BC)))))+"°")
+
+#///////////////************** No Idea! ******************* \\\\\\\\\\\\\\\\\\\
+n, m = map(int, input().split())
+arr = list(map(int, input().split()))
+A=set(map(int, input().split()))
+B=set(map(int, input().split()))
+print(sum((i in A) - (i in B) for i in arr))
