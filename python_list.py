@@ -221,3 +221,10 @@ arr = list(map(int, input().split()))
 A=set(map(int, input().split()))
 B=set(map(int, input().split()))
 print(sum((i in A) - (i in B) for i in arr))
+
+#//////////// *********** Set.add() ********************\\\\\\\\\\\\\\\\
+n = int(input())
+set1 = set()
+for i in range(n):
+    set1.add(input())
+print(len(set1))
