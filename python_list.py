@@ -241,3 +241,12 @@ for i in range(int(input())):
         ordinary_dictionary[k]=v
 for k,v in ordinary_dictionary.items():
     print(k,v)
+ 
+# //////////// //// ************ Word Order **********\\\\\\\\\\\\\\\
+
+from collections import defaultdict
+d = defaultdict(lambda: 0)
+for i in range(int(input())):
+    d[input()] += 1
+print(len(d.items()))
+print(*d.values())
