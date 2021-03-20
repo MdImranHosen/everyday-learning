@@ -228,3 +228,16 @@ set1 = set()
 for i in range(n):
     set1.add(input())
 print(len(set1))
+
+#/////////// **************** Collections.OrderedDict() ***************\\\\\\\\\\\\\\
+from collections import OrderedDict
+
+ordinary_dictionary = OrderedDict()
+for i in range(int(input())):
+    k,v = input().rsplit(' ',1)
+    if k in ordinary_dictionary:
+        ordinary_dictionary[k]=int(ordinary_dictionary[k])+int(v)
+    else:
+        ordinary_dictionary[k]=v
+for k,v in ordinary_dictionary.items():
+    print(k,v)
