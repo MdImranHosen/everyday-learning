@@ -282,3 +282,11 @@ for i in s3:
 l.sort()
 for i in l:
     print(i)
+ #/////////////////////////****************** Re compile ************************\\\\\\\\\\\\\\\\
+import re
+for i in range(int(input())):
+    try:
+       re.compile(input())
+       print(True)
+    except:
+       print(False)
