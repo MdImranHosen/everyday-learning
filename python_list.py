@@ -324,3 +324,13 @@ for i in range(n):
     if commands[0] == "discard":
         s.discard(e)
 print(sum(s))
+
+#//////////////////////////// ********************* **************\\\\\\\\\\\\\\\\
+import collections
+if __name__ == '__main__':
+    s = sorted(input().strip())
+    count = collections.Counter(s).most_common()
+    count = sorted(count, key=lambda x: (-1 * x[1], x[0]))
+
+    for x in range(3):
+        print(count[x][0], count[x][1])
