@@ -367,3 +367,14 @@ count = 0
 for i in ans:
     count = count+1
 print(count)
+#//////////////////////// *********************** set symmetric_difference  ****************************\\\\\\\\\\\\\\\\\\\\\\\\\
+n = int(input())
+nl = set(map(int, input().split()))
+m = int(input())
+ml = set(map(int, input().split()))
+ans = nl.symmetric_difference(ml)
+count = 0
+for i in ans:
+    count = count+1
+print(count)
+
