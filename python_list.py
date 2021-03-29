@@ -334,3 +334,14 @@ if __name__ == '__main__':
 
     for x in range(3):
         print(count[x][0], count[x][1])
+        
+  #////////////////////////// ************************** Set Union Operation ***************************\\\\\\\\\\\\\\\\\\\\
+n = int(input())
+nl = set(map(int, input().split()))
+m = int(input())
+ml = set(map(int, input().split()))
+tl = nl.union(ml)
+co = 0
+for i in tl:
+    co = co+1
+print(co)
