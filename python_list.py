@@ -388,4 +388,11 @@ for t in range(int(input())):
     while i < l - 1 and sides[i] <= sides[i + 1]:
         i += 1
     print('Yes' if i == l - 1 else 'No')
+    
+ #/////////////// ********************* Triangle Quest 2 *************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+n = int(input())
+
+for i in range(1,n+1):
+
+    print((10**i//9)**2)
 
