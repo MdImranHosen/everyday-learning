@@ -405,4 +405,10 @@ i = list(p)
 print(i[0])
 print(i[1])
 print(p)
+#//////////////// ********************** Power ModPower *************************\\\\\\\\\\\\\\\\\\\\
+a = int(input())
+b = int(input())
+m = int(input())
 
+print(pow(a,b))
+print(pow(a,b,m))
