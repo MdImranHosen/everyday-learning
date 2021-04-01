@@ -412,3 +412,10 @@ m = int(input())
 
 print(pow(a,b))
 print(pow(a,b,m))
+# ////////////////////////***************** Integers Come In All Sizes ***************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+a = int(input())
+b = int(input())
+m = int(input())
+n = int(input())
+
+print((a**b)+(m**n))
