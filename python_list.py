@@ -423,3 +423,14 @@ print((a**b)+(m**n))
 #//////////////////////// ********************* triangle-quest ************************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 for i in range(1,int(input())):
    print(int(((10 ** i - 1) / 9) * i))
+#/////////////////////////// ************************ iterables-and-iterators ******************************\\\\\\\\\\\\\\\\\\\\\\
+from itertools import combinations
+
+n = int(input())
+arr = input().split()
+m = int(input())
+
+c_list = list(combinations(arr, m))
+
+a_list = [i for i in c_list if 'a' in i]
+print(len(a_list) / len(c_list))
