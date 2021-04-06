@@ -448,3 +448,13 @@ result = 0
 for combination in product(*array):
     result = max(sum([x * x for x in combination]) % m, result)
 print(result)
+
+#//////////////////// ********************* set mutations ********************************* \\\\\\\\\\\\\\\\\\\\\\\
+if __name__ == '__main__':
+    (_, A) = (int(input()),set(map(int, input().split())))
+    B = int(input())
+    for _ in range(B):
+        (command, newSet) = (input().split()[0],set(map(int, input().split())))
+        getattr(A, command)(newSet)
+
+    print(sum(A))
