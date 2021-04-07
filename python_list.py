@@ -458,3 +458,18 @@ if __name__ == '__main__':
         getattr(A, command)(newSet)
 
     print(sum(A))
+ #////////////////////// *********************** The Captain's Romm ************************\\\\\\\\\\\\\\\\\\\\\\
+h = int(input())
+s = set()
+e = 0
+for j in input().split():
+    l = int(j)
+    s.add(l)
+    e += l
+
+print(s)
+print((sum(s)))
+print(e)
+print((sum(s)*h))
+print((sum(s)*h - e))
+print((sum(s)*h - e)//(h-1))
