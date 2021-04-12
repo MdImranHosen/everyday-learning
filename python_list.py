@@ -473,3 +473,13 @@ print(e)
 print((sum(s)*h))
 print((sum(s)*h - e))
 print((sum(s)*h - e)//(h-1))
+
+#////////////////////////// ******************** Check Subset *******************\\\\\\\\\\\\\\\\\\\
+T = int(input())
+
+for _ in range(T):
+    a = input()
+    A = set(input().split())
+    b = int(input())
+    B = set(input().split())
+    print(A.issubset(B))
