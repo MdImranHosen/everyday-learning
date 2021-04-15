@@ -483,3 +483,7 @@ for _ in range(T):
     b = int(input())
     B = set(input().split())
     print(A.issubset(B))
+    
+#//////////////////////// ************************* Check Strict Superset  ******************************\\\\\\\\\\\\\\\\\\\\\\\\
+a = set(input().split())
+print(all(a > set(input().split()) for _ in range(int(input()))))
