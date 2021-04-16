@@ -487,3 +487,15 @@ for _ in range(T):
 #//////////////////////// ************************* Check Strict Superset  ******************************\\\\\\\\\\\\\\\\\\\\\\\\
 a = set(input().split())
 print(all(a > set(input().split()) for _ in range(int(input()))))
+#///////////////////// ************************* String Concate ******************************\\\\\\\\\\\\\\\\\\\\\\\
+def concatenate(*n):
+    key = ''
+    j = 0
+    for i in n:
+        j += 1
+        if j != 1:
+          key += '_'+i
+        else:
+          key += i
+    return key
+print(concatenate("I","Love","Pyton","!"))
