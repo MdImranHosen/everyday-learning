@@ -517,3 +517,12 @@ if l == 8:
         print("Invalid")
 else:
   print("Invalid")
+  
+  #///////////////////////// ******************************** Celsius to Faheheirent **************************\\\\\\\\\\\\\\\\\\\\
+  def celsiusToFahenheit(n):
+    d = n*(9/5)+32
+    return d
+
+n = float(input())
+res = celsiusToFahenheit(n)
+print(res)
