@@ -499,3 +499,21 @@ def concatenate(*n):
           key += i
     return key
 print(concatenate("I","Love","Pyton","!"))
+
+#//////////////////////////// **************** Phone Number Valid / Invalid ************\\\\\\\\\\\\\\\\\\
+import re
+n = int(input())
+stri = str(n)
+l = len(stri)
+ls = list(stri)
+if l == 8:
+    if int(ls[0]) == 1:
+        print("Valid")
+    elif int(ls[0]) == 8:
+        print("Valid")
+    elif int(ls[0]) == 9:
+        print("Valid")
+    else:
+        print("Invalid")
+else:
+  print("Invalid")
