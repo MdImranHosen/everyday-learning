@@ -526,3 +526,13 @@ else:
 n = float(input())
 res = celsiusToFahenheit(n)
 print(res)
+#//////////////////////////////// ***************************** Readlines ******************************\\\\\\\\\\\\\\\\\\\\\\\\
+file  = open("imran.txt", "r")
+l = file.readlines()
+
+for i in l:
+    f = i[0]
+    a = len(i.strip())
+    d = f + str(a)
+    print(d)
+file.close()
