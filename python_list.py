@@ -590,3 +590,15 @@ for char in text:
        dict[char] = 1
        
 print(dict)
+#////////////// ****************** zipped zip function use to python ************************\\\\\\\\\\\\\\\\\\\\\\\\\\
+n, x = map(int, input().split())
+
+mxs = []
+for _ in range(x):
+    mxs.append(map(float, input().split()))
+
+for i in zip(*mxs):
+    print(sum(i))
+    print(len(i))
+    print(sum(i)/len(i))
+    
