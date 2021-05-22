@@ -601,4 +601,7 @@ for i in zip(*mxs):
     print(sum(i))
     print(len(i))
     print(sum(i)/len(i))
+#//////////////// ****************** Python Evaluation HackerRank ************************** \\\\\\\\\\\\\\\\\\\\\
+e = input()
+eval(e)
     
