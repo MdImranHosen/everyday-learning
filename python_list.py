@@ -611,4 +611,8 @@ if __name__ == "__main__":
     arr = list(input().strip().split())
     print(all([all([int(x) > 0 for x in arr ]), any([x == x[::-1] for x in arr])]))
     
-    
+ #/////////// ************************ Python ginortS ******************** \\\\\\\\\\\\\\\\\
+if __name__ == "__main__":
+    string = input().strip()
+
+    print(*sorted(string, key=lambda  x: (-x.islower(), - x.isupper(), -x.isdigit(), x in '02468', x)), sep='')
