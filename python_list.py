@@ -616,3 +616,9 @@ if __name__ == "__main__":
     string = input().strip()
 
     print(*sorted(string, key=lambda  x: (-x.islower(), - x.isupper(), -x.isdigit(), x in '02468', x)), sep='')
+# //////////////// ************** Python Detect floating point number \\\\\\\\\\\\\\\\\\
+from re import match, compile
+pattern = compile('^[-+]?[0-9]*\.[0-9]+$')
+
+for _ in range(int(input())):
+    print(bool(pattern.match(input())))
