@@ -622,3 +622,9 @@ pattern = compile('^[-+]?[0-9]*\.[0-9]+$')
 
 for _ in range(int(input())):
     print(bool(pattern.match(input())))
+   
+  # //////////////////************************* Python  Re.split  Hackerrank ******************** \\\\\\\\\\\\\\\\\\\\\
+regex_pattern = r"[,.]+"	# Do not delete 'r'.
+
+import re
+print("\n".join(re.split(regex_pattern, input())))
