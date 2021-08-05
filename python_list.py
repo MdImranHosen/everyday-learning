@@ -628,3 +628,14 @@ regex_pattern = r"[,.]+"	# Do not delete 'r'.
 
 import re
 print("\n".join(re.split(regex_pattern, input())))
+# \\\\\\\\\\\\\\\\\\\ ************************** Python Map and Lambda Function ****************** ///////////////////////////
+cube = lambda x: pow(x,3)
+
+def fibonacci(n):
+    imran = [0,1]
+    for i in range(2,n):
+        imran.append(imran[i-2] + imran[i-1])
+    return imran[0:n]
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
