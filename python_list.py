@@ -661,3 +661,7 @@ if __name__ == '__main__':
 filtered_emails = filter_mail(emails)
 filtered_emails.sort()
 print(filtered_emails)
+#\\\\\\\\\\\\\\\\\\*************************** Python Group(), Groups(), Groupdit() Hackerrank *********************////////////////////////
+import re
+m = re.search(r'([a-zA-Z0-9])\1', input().strip())
+print(m.group(1) if m else -1)
