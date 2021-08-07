@@ -665,3 +665,9 @@ print(filtered_emails)
 import re
 m = re.search(r'([a-zA-Z0-9])\1', input().strip())
 print(m.group(1) if m else -1)
+#\\\\\\\\\\\\\\\\\\ *********************** PyThon Findall(), Finditer() Hackerrank ********************///////////////
+import re
+vowels = 'aeiou'
+consonants = 'qwrtypsdfghjklzxcvbnm'
+match = re.findall(r'(?<=[' + consonants + '])([' + vowels + ']{2,})(?=[' + consonants + '])', input(), flags=re.I)
+print('\n'.join(match or ['-1']))
