@@ -671,3 +671,19 @@ vowels = 'aeiou'
 consonants = 'qwrtypsdfghjklzxcvbnm'
 match = re.findall(r'(?<=[' + consonants + '])([' + vowels + ']{2,})(?=[' + consonants + '])', input(), flags=re.I)
 print('\n'.join(match or ['-1']))
+
+#//////////////// *********************** Reduce function *******************\\\\\\\\\\\\\\\\\\\\\\
+from fractions import Fraction
+from functools import reduce
+
+
+def dfun(imran):
+    t = Fraction(reduce(lambda x, y: x * y, imran))
+    return t.numerator, t.denominator
+
+if __name__ == '__main__':
+    imran = []
+    for _ in range(int(input())):
+        imran.append(Fraction(*map(int, input().split())))
+    result = dfun(imran)
+    print(*result)
