@@ -56,3 +56,22 @@ inurl:/admin/index.php / login.php/ user.php
 	   -w 0.00001 = Timeout in milliseconds to wait for each reply. 
 	7. isitdownrightnow . com check for website Down status ..
 </p>
+
+<h1>/////************ 17-11-2021  Dark Web / Deep Web ************\\\\\\ </h1>
+<p>
+	1. First Instal Tor Browser 
+	2. Search thehidden wiki . org
+	3. web site extension . onion
+	*****
+	1. Bug Bounging
+	
+</p>
+
+<h1>/////************ 17-11-2021  Havij Download – Advanced SQL Injection Tool ************\\\\\\ </h1>
+<p>
+	1. Havij Download – Advanced SQL Injection Tool
+
+   2. You can download Havij v1.12 Free Edition here:
+
+   3. Password is darknet123
+</p>
