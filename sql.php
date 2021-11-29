@@ -144,4 +144,30 @@ UPDATE `registered_students` SET `registered_students`.`sub_count`= (SELECT COUN
     FOREIGN KEY(PROGRAMS_ID) REFERENCES programs(PROGRAMS_ID)
 )";
 
+"
+SELECT COLLEGE_NAME FROM registered_college WHERE substr(COLLEGE_NAME, 1, 1) IN ('A','E','I','O','U') 
+
+
+SELECT CITY FROM STATION WHERE LOWER(substr(CITY, 1, 1)) IN ('A','E','I','O','U')
+
+/*Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.*/
+
+SELECT DISTINCT CITY FROM STATION WHERE (CITY LIKE 'a%' OR CITY LIKE 'e%' OR CITY LIKE 'i%' OR CITY LIKE 'o%' OR CITY LIKE 'u%') AND (CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u');
+
+
+/*Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.*/
+
+SELECT DISTINCT CITY FROM STATION WHERE NOT (CITY LIKE 'a%' OR CITY LIKE 'e%' OR CITY LIKE 'i%' OR CITY LIKE 'o%' OR CITY LIKE 'u%');
+
+/*Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.*/
+
+SELECT DISTINCT CITY FROM STATION WHERE NOT (CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u');
+
+
+/*Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.*/
+
+SELECT DISTINCT CITY FROM STATION WHERE ( NOT (CITY LIKE 'a%' OR CITY LIKE 'e%' OR CITY LIKE 'i%' OR CITY LIKE 'o%' OR CITY LIKE 'u%')) OR (NOT (CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u'));
+
+";
+
 ?>
