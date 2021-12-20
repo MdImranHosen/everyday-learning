@@ -218,5 +218,9 @@ FROM
  AS temp GROUP BY temp.idn;
  
 "
+	
+"
+SELECT b.N, CASE WHEN b.P is not null THEN CASE when (SELECT COUNT(*) FROM bst WHERE P = b.N) = 0 THEN 'Leaf' else 'Inner' END ELSE 'Root' END FROM bst b ORDER BY b.N;
+"
 
 ?>
