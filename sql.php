@@ -229,5 +229,9 @@ SELECT company_code, founder,
 (SELECT COUNT(DISTINCT manager_code) FROM manager WHERE company_code = c.company_code), 
 (SELECT COUNT(DISTINCT employee_code) FROM employee WHERE company_code = c.company_code) FROM company c  ORDER BY company_code;
 "
+// Aggregations The Blunder sql 
+"
+SELECT ROUND(AVG(salary)) - ROUND(AVG(REPLACE(salary, '0',''))) FROM `employees`
+"
 
 ?>
