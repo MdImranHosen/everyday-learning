@@ -233,5 +233,8 @@ SELECT company_code, founder,
 "
 SELECT ROUND(AVG(salary)) - ROUND(AVG(REPLACE(salary, '0',''))) FROM `employees`
 "
+"
+SELECT MAX(salary*months), COUNT(*) FROM employee WHERE (salary*months) = (SELECT MAX(salary*months) FROM employee);
+"
 
 ?>
