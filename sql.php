@@ -239,4 +239,8 @@ SELECT MAX(salary*months), COUNT(*) FROM employee WHERE (salary*months) = (SELEC
 "
 SELECT ROUND(LONG_W, 4) FROM STATION WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N < 137.2345);
 "
+	///////////////////////////////////// 27-12-2021 \\\\\\\\\\\\\\\\\\\\\\\\\\\
+" 
+SELECT ROUND(MIN(LAT_N), 4) FROM STATION WHERE LAT_N < 38.7780
+"
 ?>
