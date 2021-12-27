@@ -236,5 +236,7 @@ SELECT ROUND(AVG(salary)) - ROUND(AVG(REPLACE(salary, '0',''))) FROM `employees`
 "
 SELECT MAX(salary*months), COUNT(*) FROM employee WHERE (salary*months) = (SELECT MAX(salary*months) FROM employee);
 "
-
+"
+SELECT ROUND(LONG_W, 4) FROM STATION WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N < 137.2345);
+"
 ?>
