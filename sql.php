@@ -245,5 +245,9 @@ SELECT ROUND(MIN(LAT_N), 4) FROM STATION WHERE LAT_N < 38.7780
 "
 "
 SELECT CASE WHEN GRADES.GRADE > 7 THEN STUDENTS.NAME ELSE 'NULL' END,GRADES.GRADE,STUDENTS.MARKS FROM STUDENTS, GRADES WHERE STUDENTS.MARKS BETWEEN GRADES.MIN_MARK AND GRADES.MAX_MARK ORDER BY GRADES.GRADE DESC, STUDENTS.NAME ASC
-"	
+"
+	///////////// 03-01-2022 \\\\\\\\\\\\\\\\
+"
+select s.hacker_id, h.name from submissions s inner join challenges c on c.challenge_id = s.challenge_id inner join difficulty d on d.difficulty_level = c.difficulty_level and d.score = s.score inner join hackers h on s.hacker_id = h.hacker_id group by s.hacker_id, h.name having count(s.score) > 1 order by count(s.score) desc, s.hacker_id
+"
 ?>
