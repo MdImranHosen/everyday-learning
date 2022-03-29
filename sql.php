@@ -665,8 +665,16 @@ SELECT company_code, founder,
 "
 SELECT * FROM registered_exam WHERE COURSE_YEAR_ID = 69 OR COURSE_YEAR_ID = 70 OR COURSE_YEAR_ID = 71 OR COURSE_YEAR_ID = 72 OR COURSE_YEAR_ID = 73 OR COURSE_YEAR_ID = 74 OR COURSE_YEAR_ID = 75 OR COURSE_YEAR_ID = 76  
 "
-	
-	
+/// Database Tables Column value with in string replice 	
+"
+UPDATE 
+    admitted_student 
+SET
+    `ADMITTED_STUDENT_NAME` = REPLACE(`ADMITTED_STUDENT_NAME`, 'MdImranH','&')
+WHERE
+    `ADMITTED_STUDENT_STATUS` = 1;
+    
+"	
 	
 	
 ?>
