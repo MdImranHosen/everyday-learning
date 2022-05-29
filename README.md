@@ -3,11 +3,11 @@ Everyday Learning Script Documents
 <h1>Technical Skill</h1>
 <ul>
   <li>PyThon, PHP, Java, C</li>
-  <li>Laravel Framework, OOP, PHP MVC Framework </li>
+  <li>Flutter, Laravel Framework, OOP, PHP MVC Framework </li>
   <li>SQL, MySql, PDO</li>
   <li>JavaScript, jQuery, json, Ajax</li>
   <li>HTML, HTML5, CSS, CSS3</li>
-  <li>Bootstrap 3,4 AND Fontawesome 4,5 AND Google font</li>
+  <li>Bootstrap AND Fontawesome AND Google font</li>
   <li>Firebase, PHPMailer </li>
   <li>Google API, Google MAP, Facebook API, Traccar API</li>
   <li>ffmpeg, fpdf</li>
