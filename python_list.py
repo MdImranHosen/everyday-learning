@@ -714,3 +714,10 @@ for match in matches:
 
 if anymatch == False:
     print((-1, -1))
+# ///////////////////// ************ css Color Code get with python - 04-12-2022 ***************\\\\\\\\\\\\\\\\\\\\
+import re
+for i in range(int(input())):
+    matchkey = re.findall(r"(\#[a-f0-9]{3,6})[\;\,\)]{1}", input(), re.I)
+    if matchkey:
+        for j in list(matchkey):
+            print(j)
