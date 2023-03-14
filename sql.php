@@ -674,7 +674,23 @@ SET
 WHERE
     `ADMITTED_STUDENT_STATUS` = 1;
     
-"	
+"
+	
+//////////////////// 14- 03 -2023 ////////////////////
+	"
+	DELETE selected_courses 
+FROM selected_courses
+INNER JOIN registered_students
+  ON registered_students.REGISTERED_STUDENTS_ID = selected_courses.REGISTERED_STUDENTS_ID
+WHERE registered_students.REGISTERED_STUDENTS_EXAM_ROLL BETWEEN 1201 AND 1207
+
+
+INSERT INTO selected_courses (`REGISTERED_STUDENTS_ID`, `REGISTERED_EXAM_ID`, `COURSE_CODE_TITLE_ID`)
+SELECT REGISTERED_STUDENTS_ID, 1821, '6307'
+FROM registered_students
+WHERE REGISTERED_EXAM_ID = 1821 AND REGISTERED_STUDENTS_EXAM_ROLL BETWEEN 16801 AND 16850
+	
+	"
 	
 	
 ?>
