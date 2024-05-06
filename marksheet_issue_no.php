@@ -1,0 +1,5 @@
+
+
+//B.Sc. in Electrical and Electronics Engineering
+
+SELECT * FROM `registered_exam` WHERE `COURSE_YEAR_ID` BETWEEN 45 and 52
