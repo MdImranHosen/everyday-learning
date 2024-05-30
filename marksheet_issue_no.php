@@ -18,3 +18,6 @@ SELECT * FROM `registered_exam` WHERE `COURSE_YEAR_ID` BETWEEN 53 and 60
 // Masters in Bank Management
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 176 OR COURSE_YEAR_ID = 177 OR COURSE_YEAR_ID BETWEEN 206 and 208
+// Evening Masters in Bank Management
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 219 and 225
