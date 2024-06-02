@@ -31,3 +31,7 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 172 and 175
 // Post Graduate Diploma in Film and Television
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 120 OR COURSE_YEAR_ID = 121 OR COURSE_YEAR_ID = 168 OR COURSE_YEAR_ID = 169
+
+// M.Sc. in Textile Engineering
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 101 and 103
