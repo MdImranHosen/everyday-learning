@@ -39,3 +39,7 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 101 and 103
 // B.D.S
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 11 and 14
+
+// B.Sc. Honours (Home Economics) (Clothing and Textile)
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 156 and 159
