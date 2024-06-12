@@ -48,6 +48,10 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 108 and 111
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 156 and 159
 
+// B.Sc. Honours (Home Economics) (Resource Management and Entrepreneurship)
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 144 and 147
+
 // B.U.M.S
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 112 and 115
