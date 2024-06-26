@@ -15,6 +15,10 @@ SELECT * FROM `registered_exam` WHERE `COURSE_YEAR_ID` BETWEEN 45 and 52
 
 SELECT * FROM `registered_exam` WHERE `COURSE_YEAR_ID` BETWEEN 53 and 60
 
+// B.Sc. in Industrial and Production Engineering
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 85 and 92
+
 // Masters in Bank Management
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 176 OR COURSE_YEAR_ID = 177 OR COURSE_YEAR_ID BETWEEN 206 and 208
@@ -71,3 +75,5 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 241 OR COURSE_YEAR_ID BET
 // Master of Science in Nursing
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 196 OR COURSE_YEAR_ID = 232 OR COURSE_YEAR_ID = 240 OR COURSE_YEAR_ID = 246
+
+
