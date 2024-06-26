@@ -63,3 +63,7 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 112 and 115
 // Master of Economics (Entrepreneurship Economics)
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 241 OR COURSE_YEAR_ID BETWEEN 209 and 211
+
+// Master of Science in Nursing
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 196 OR COURSE_YEAR_ID = 232 OR COURSE_YEAR_ID = 240 OR COURSE_YEAR_ID = 246
