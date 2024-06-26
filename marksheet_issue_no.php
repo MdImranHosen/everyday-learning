@@ -27,6 +27,10 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 219 and 225
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 172 and 175
 
+// Bachelor of Photography
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 122 OR COURSE_YEAR_ID = 123 OR COURSE_YEAR_ID BETWEEN 134 and 139
+
 // Post Graduate Diploma in Film and Television
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 120 OR COURSE_YEAR_ID = 121 OR COURSE_YEAR_ID = 168 OR COURSE_YEAR_ID = 169
