@@ -72,6 +72,10 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 241 OR COURSE_YEAR_ID BET
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 172 and 175
 
+// Master of Economics in Development Economics
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 215 and 218
+
 // Bachelor of Social Sciences (Honours) in Environmental and Resource Economics
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 188 and 195
