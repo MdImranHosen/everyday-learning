@@ -27,10 +27,6 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 176 OR COURSE_YEAR_ID = 1
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 219 and 225
 
-// Master of Economics (Environmental Economics)
-
-SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 172 and 175
-
 // Bachelor of Photography
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 122 OR COURSE_YEAR_ID = 123 OR COURSE_YEAR_ID BETWEEN 134 and 139
@@ -71,6 +67,14 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 112 and 115
 // Master of Economics (Entrepreneurship Economics)
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 241 OR COURSE_YEAR_ID BETWEEN 209 and 211
+
+// Master of Economics (Environmental Economics)
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 172 and 175
+
+// Bachelor of Social Sciences (Honours) in Environmental and Resource Economics
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 188 and 195
 
 // Master of Science in Nursing
 
