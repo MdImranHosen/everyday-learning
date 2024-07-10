@@ -51,6 +51,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 11 and 14
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 108 and 111
 
+// B.Sc. Honours (Home Economics) (Food and Nutrition)
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 140 and 143
 
 // B.Sc. Honours (Home Economics) (Art and Creative Studies)
 
