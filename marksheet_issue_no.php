@@ -80,6 +80,10 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 172 and 175
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 215 and 218
 
+// Master of Environmental and Resource Economics
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 212 and 214
+
 // Bachelor of Social Sciences (Honours) in Environmental and Resource Economics
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 188 and 195
