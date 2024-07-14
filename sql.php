@@ -691,6 +691,12 @@ FROM registered_students
 WHERE REGISTERED_EXAM_ID = 1821 AND REGISTERED_STUDENTS_EXAM_ROLL BETWEEN 16801 AND 16850
 	
 	"
+
+"
+
+SELECT registered_exam.* FROM `registered_exam` JOIN course_year ON course_year.COURSE_YEAR_ID = registered_exam.COURSE_YEAR_ID WHERE course_year.PROGRAMS_ID = 1 AND RIGHT(`RESULT_PUBLISH_DATE`, 2) = '23'
+
+"
 	
 	
 ?>
