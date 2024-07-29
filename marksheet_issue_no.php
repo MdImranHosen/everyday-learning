@@ -67,6 +67,10 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 156 and 159
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 144 and 147
 
+// B.Sc. Honours (Home Economics) (Child Development and Social Relationship)
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 148 and 151
+
 // B.U.M.S
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 112 and 115
