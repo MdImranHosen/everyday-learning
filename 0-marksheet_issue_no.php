@@ -103,4 +103,8 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 196 OR COURSE_YEAR_ID = 2
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 170 OR COURSE_YEAR_ID = 171
 
+// B.Sc. in Speech & Language Therapy
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 61 and 64
+
 
