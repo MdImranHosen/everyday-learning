@@ -107,4 +107,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 170 OR COURSE_YEAR_ID = 1
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 61 and 64
 
+// B.Sc. in Occupational Therapy
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 65 and 68
+
+
 
