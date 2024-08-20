@@ -47,6 +47,10 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 101 and 103
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 11 and 14
 
+// B.H.M.S
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 104 and 107
+
 // B.A.M.S
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 108 and 111
