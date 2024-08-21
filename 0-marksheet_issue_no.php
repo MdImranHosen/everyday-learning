@@ -115,5 +115,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 61 and 64
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 65 and 68
 
+// B.Sc. in Prosthetics & Orthotics
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 184 and 187
+
 
 
