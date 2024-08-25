@@ -727,6 +727,13 @@ course_year.PROGRAMS_ID = 2 OR course_year.PROGRAMS_ID = 3 OR course_year.PROGRA
 course_year.PROGRAMS_ID = 8 OR course_year.PROGRAMS_ID = 9 OR course_year.PROGRAMS_ID = 27  OR course_year.PROGRAMS_ID = 53 
 
 SELECT registered_students.* FROM `registered_exam` JOIN course_year ON course_year.COURSE_YEAR_ID = registered_exam.COURSE_YEAR_ID JOIN registered_students ON registered_students.REGISTERED_EXAM_ID = registered_exam.REGISTERED_EXAM_ID WHERE (registered_students.REGISTERED_STUDENTS_COLLEGE_VERIFY = 1) AND (course_year.PROGRAMS_ID = 2 OR course_year.PROGRAMS_ID = 3 OR course_year.PROGRAMS_ID = 5 OR course_year.PROGRAMS_ID = 6 OR course_year.PROGRAMS_ID = 7 OR course_year.PROGRAMS_ID = 10 OR course_year.PROGRAMS_ID = 15 OR course_year.PROGRAMS_ID = 16 OR course_year.PROGRAMS_ID = 19 OR course_year.PROGRAMS_ID = 21 OR course_year.PROGRAMS_ID = 22 OR course_year.PROGRAMS_ID = 23 ) AND RIGHT(registered_exam.RESULT_PUBLISH_DATE, 2) = '23'
+
+/////////////////
+
+UPDATE `registered_students` SET sub_honrs = REPLACE(sub_honrs, 'Honours:', '') WHERE `sub_honrs` LIKE "%Honours:%"
+
+
+
 "
 	
 	
