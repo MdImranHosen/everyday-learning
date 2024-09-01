@@ -1,3 +1,6 @@
+// M.B.B.S
+
+SELECT * FROM `registered_exam` WHERE `COURSE_YEAR_ID` BETWEEN 1 and 4
 
 // Basic B.Sc. in Nursing
 
