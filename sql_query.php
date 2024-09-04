@@ -345,3 +345,6 @@ SELECT name FROM Employee ORDER BY name ASC
 "
 SELECT name FROM Employee WHERE salary > 2000 AND months < 10 ORDER BY employee_id ASC
 "
+
+    UPDATE selected_courses JOIN registered_students ON selected_courses.REGISTERED_STUDENTS_ID = registered_students.REGISTERED_STUDENTS_ID SET registered_students.`group_in` = 1 WHERE registered_students.REGISTERED_EXAM_ID = 892 AND selected_courses.COURSE_CODE_TITLE_ID = 230
+
