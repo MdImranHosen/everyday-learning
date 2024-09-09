@@ -126,5 +126,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 184 and 187
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 25 and 26
 
+// B.Sc. in Health Technology (Laboratory)
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 15 and 18
+
 
 
