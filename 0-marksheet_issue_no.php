@@ -122,5 +122,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 65 and 68
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 184 and 187
 
+// M.Sc. in Physiotherapy
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 25 and 26
+
 
 
