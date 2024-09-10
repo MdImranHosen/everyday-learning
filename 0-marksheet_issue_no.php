@@ -130,5 +130,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 25 and 26
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 15 and 18
 
+// B.Sc. in Health Technology (Radiology and Imaging)
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 93 and 96
+
 
 
