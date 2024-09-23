@@ -134,5 +134,8 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 15 and 18
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 93 and 96
 
+// MBA in Textile and Apparel Value Chain
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 126 and 129
 
 
