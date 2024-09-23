@@ -138,4 +138,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 93 and 96
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 126 and 129
 
+// M.Sc. in Rehabilitation Science
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 27 and 28
+
+
 
