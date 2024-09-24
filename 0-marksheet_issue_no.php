@@ -46,6 +46,10 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 120 OR COURSE_YEAR_ID = 1
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 101 and 103
 
+// B.Sc. in Textile Engineering
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 69 and 76
+
 // B.D.S
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 11 and 14
