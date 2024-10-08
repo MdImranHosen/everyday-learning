@@ -114,6 +114,10 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 188 and 195
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 197 and 204
 
+// Bachelor of Social Sciences (Honours) in Entrepreneurial Economics
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 205 OR COURSE_YEAR_ID = 245 OR COURSE_YEAR_ID BETWEEN 228 and 231
+
 // Master in Human Security
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 170 OR COURSE_YEAR_ID = 171
