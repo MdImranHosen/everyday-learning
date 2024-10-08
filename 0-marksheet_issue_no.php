@@ -6,6 +6,10 @@ SELECT * FROM `registered_exam` WHERE `COURSE_YEAR_ID` BETWEEN 1 and 4
 
 SELECT * FROM `registered_exam` WHERE `COURSE_YEAR_ID` BETWEEN 5 and 8
 
+// Master of Science in Nursing
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 196 OR COURSE_YEAR_ID = 232 OR COURSE_YEAR_ID = 240 OR COURSE_YEAR_ID = 246
+
 //B.Sc. in Civil Engineering
 
 SELECT * FROM `registered_exam` WHERE `COURSE_YEAR_ID` BETWEEN 37 AND 44
@@ -106,9 +110,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 212 and 214
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 188 and 195
 
-// Master of Science in Nursing
+// Bachelor of Social Sciences (Honours) in Development Economics
 
-SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID = 196 OR COURSE_YEAR_ID = 232 OR COURSE_YEAR_ID = 240 OR COURSE_YEAR_ID = 246
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 197 and 204
 
 // Master in Human Security
 
