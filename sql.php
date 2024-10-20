@@ -733,6 +733,11 @@ SELECT registered_students.* FROM `registered_exam` JOIN course_year ON course_y
 UPDATE `registered_students` SET sub_honrs = REPLACE(sub_honrs, 'Honours:', '') WHERE `sub_honrs` LIKE "%Honours:%"
 
 
+//////////////////////
+
+SELECT admitted_student.* FROM `admitted_student` JOIN subjects ON admitted_student.SUBJECTS_ID = subjects.SUBJECTS_ID JOIN programs ON programs.PROGRAMS_ID = subjects.PROGRAMS_ID WHERE subjects.PROGRAMS_ID = 4
+
+
 
 "
 	
