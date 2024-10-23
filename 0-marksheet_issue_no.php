@@ -158,5 +158,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 126 and 129
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 27 and 28
 
+// MSc. in Applied Epidemiology
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 124 and 125
+
 
 
