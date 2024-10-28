@@ -739,6 +739,9 @@ SELECT admitted_student.* FROM `admitted_student` JOIN subjects ON admitted_stud
 
 
 
+INSERT INTO `course_code_title`(`COURSE_YEAR_ID`, `SUBJECTS_ID`, `order_by`, `COURSE_CODE_TITLE_CODE`, `COURSE_CODE_TITLE`, `course_code`, `course_extra`, `R1`, `R2`, `R3`, `R4`, `R5`, `R6`, `R7`, `R8`, `R9`, `background_subject`, `curriculum`, `syllabus_session_id`, `class_in_divided`, `COURSE_CODE_TITLE_CREDIT`, `COURSE_CODE_TITLE_STATUS`, `COURSE_CODE_TITLE_TYPE`)
+SELECT `COURSE_YEAR_ID`, `SUBJECTS_ID`, `order_by`, `COURSE_CODE_TITLE_CODE`, `COURSE_CODE_TITLE`, `course_code`, `course_extra`, `R1`, `R2`, `R3`, `R4`, `R5`, `R6`, `R7`, `R8`, `R9`, `background_subject`, "New Curriculum", "18", `class_in_divided`, `COURSE_CODE_TITLE_CREDIT`, `COURSE_CODE_TITLE_STATUS`, `COURSE_CODE_TITLE_TYPE` FROM `course_code_title` WHERE `COURSE_YEAR_ID` = 146
+
 "
 	
 	
