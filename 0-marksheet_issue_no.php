@@ -162,5 +162,9 @@ SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 27 and 28
 
 SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 124 and 125
 
+// Master of Development Economics // BIDS Graduate School of Economics (BGSE)
+
+SELECT * FROM `registered_exam` WHERE COURSE_YEAR_ID BETWEEN 247 and 249
+
 
 
