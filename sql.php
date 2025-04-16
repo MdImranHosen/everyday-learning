@@ -750,6 +750,10 @@ SELECT registered_students.REGISTERED_STUDENTS_ID, 1266, '859'
 	FROM registered_students JOIN admitted_student ON registered_students.ADMITTED_STUDENT_ID = admitted_student.ADMITTED_STUDENT_ID 
 	WHERE registered_students.REGISTERED_EXAM_ID = 1266 AND admitted_student.REGISTERED_COLLEGE_ID = 83
 
+	UPDATE registered_students 
+SET c_roll = CAST(REGEXP_REPLACE(CLASS_ROLL, '[^0-9]', '') AS UNSIGNED) 
+WHERE REGISTERED_EXAM_ID = 1361;
+
 	
 
 "
