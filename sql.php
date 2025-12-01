@@ -761,7 +761,8 @@ INSERT INTO `registered_students`( `ADMITTED_STUDENT_ID`, `REGISTERED_EXAM_ID`,`
 ///  group_in //
 UPDATE selected_courses JOIN registered_students ON selected_courses.REGISTERED_STUDENTS_ID = registered_students.REGISTERED_STUDENTS_ID SET registered_students.group_in = 1 WHERE registered_students.REGISTERED_EXAM_ID = 1440 AND selected_courses.COURSE_CODE_TITLE_ID = 826
 
-
+////////////////
+	UPDATE registered_students JOIN admitted_student ON registered_students.ADMITTED_STUDENT_ID = admitted_student.ADMITTED_STUDENT_ID SET registered_students.CENTER_ID = 3 WHERE registered_students.REGISTERED_EXAM_ID = 79 AND admitted_student.REGISTERED_COLLEGE_ID = 2 AND admitted_student.SUBJECTS_ID = 26; 
 "
 	
 	
